@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: 5
+  username: ENV["USERNAME_DB"]
+  password: ENV["PASSWORD_DB"]
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: library_manage_development
+
+test:
+  <<: *default
+  database: library_manage_test
+
+production:
+  <<: *default
+  database: library_manage_development
+  username: ENV["USERNAME_DB"]
+  password: ENV["PASSWORD_DB"]
