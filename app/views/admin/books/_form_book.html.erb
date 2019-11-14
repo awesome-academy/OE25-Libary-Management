@@ -1,0 +1,17 @@
+<%= form_for [:admin, @book] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label t "name", class: "col-sm-3" %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label t "price" %>
+  <%= f.number_field :price, class: "form-control" %>
+
+  <%= f.label t "rest_amount" %>
+  <%= f.number_field :rest_amount, class: "form-control" %>
+
+  <%= f.label t "decription" %>
+  <%= f.text_area :decription, class: "form-control" %>
+
+  <%= f.submit t("edit_book"), class: "btn btn-primary edit" %>
+<% end %>
