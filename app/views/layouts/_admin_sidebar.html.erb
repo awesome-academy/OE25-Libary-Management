@@ -1,0 +1,54 @@
+<aside>
+  <div id="sidebar" class="nav-collapse ">
+    <ul class="sidebar-menu">
+      <li class="active">
+        <%= link_to admin_dashboard_path do %>
+          <i class="fa fa-home"></i>
+          <span><%= t "home" %></span>
+        <% end %>
+      </li>
+      <li class="sub-menu">
+        <%= link_to "#" do %>
+          <i class="fa fa-users"></i>
+          <span><%= t "user_manage" %></span>
+        <% end %>
+      </li>
+      <li class="sub-menu">
+        <%= link_to "#" do %>
+          <i class="fa fa-book"></i>
+          <span><%= t "book_manage" %></span>
+        <% end %>
+      </li>
+      <li class="sub-menu">
+        <%= link_to "#" do %>
+          <i class="fa fa-book"></i>
+          <span><%= t "category_manage" %></span>
+        <% end %>
+      </li>
+      <li class="sub-menu">
+        <%= link_to "#" do %>
+          <i class="fa fa-user"></i>
+          <span><%= t "author_manage" %></span>
+        <% end %>
+      </li>
+      <li class="sub-menu">
+        <%= link_to "#" do %>
+          <i class="fa fa-bookmark"></i>
+          <span><%= t "publisher_manage" %></span>
+        <% end %>
+      </li>
+      <li class="sub-menu">
+        <%= link_to "#" do %>
+          <i class="fa fa-comment"></i>
+          <span><%= t "comment_manage" %></span>
+        <% end %>
+      </li>
+      <li class="sub-menu">
+        <%= link_to "#" do %>
+          <i class="fa fa-book"></i>
+          <span><%= t "borowed_book" %></span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</aside>

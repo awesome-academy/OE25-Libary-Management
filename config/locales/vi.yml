@@ -34,7 +34,6 @@ vi:
   new_user: Người dùng mới?
   sign_up_now: Đăng ký ngay!
   log_out: Thoát
-  profile: Hồ sơ
   settings: Cài đặt
   remember_me_on_this_computer: Nhớ tài khoản trên máy tính này
   contact: Liên hệ
@@ -109,3 +108,17 @@ vi:
   forgot_password: Quên mật khẩu
   welcome: Chào mừng đến với ứng dụng Quản lý thư viện
   account_activated: Tài khoản đã được kích hoạt
+  library_manage: "Quản lý thư viện"
+  login: "Đăng nhập"
+  user_manage: "Quản lý người dùng"
+  book_manage: "Quản lý sách"
+  category_manage: "Quản lý thể loại sách"
+  author_manage: "Quản lý tác giả"
+  publisher_manage: "Quản lý nhà sản xuất"
+  comment_manage: "Quản lý các bình luận"
+  intr_library_management: "Đây là 1 website quản lý thư viện, giúp chúng ta có
+    thể quản lý và cho mượn sách một cách thuận tiện"
+  user: "Người dùng"
+  profile: "Thông tin cá nhân"
+  logout: "Đăng xuất"
+  borowed_book: "Mượn sách"

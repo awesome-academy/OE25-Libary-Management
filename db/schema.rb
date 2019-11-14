@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 2019_12_11_065119) do
     t.string "address"
     t.string "phone"
     t.string "identity_card"
-    t.integer "role", default: 2
+    t.integer "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
