@@ -4,7 +4,10 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 ruby "2.6.3"
 
 gem "bootsnap", ">= 1.4.2", require: false
+gem "figaro"
+gem "i18n-js"
 gem "jbuilder", "~> 2.7"
+gem "kaminari"
 gem "mysql2", ">= 0.4.4"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.1"
@@ -12,9 +15,6 @@ gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
-gem "figaro"
-gem "kaminari"
-gem "i18n-js"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -36,4 +36,3 @@ group :test do
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
