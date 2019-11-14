@@ -1,0 +1,34 @@
+<%= form_for [:admin, @user] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label t "name" %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label t "email" %>
+  <%= f.email_field :email, class: "form-control" %>
+
+  <%= f.label t "address" %>
+  <%= f.text_field :address, class: "form-control" %>
+
+  <%= f.label t "phone" %>
+  <%= f.text_field :phone, class: "form-control", autofocus: true, placeholder: Settings.xxx %>
+
+  <%= f.label t "identity_card" %>
+  <%= f.text_field :identity_card, class: "form-control" %>
+
+  <%= f.label t "birth" %>
+  <%= f.date_field :birth, class: "form-control" %>
+
+  <%= f.label t "sex" %>
+  <br>
+  <%= f.select(:sex, select_sex, class: "form-control")%>
+  <br>
+
+  <%= f.label t "password" %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label t "password_confirmation" %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

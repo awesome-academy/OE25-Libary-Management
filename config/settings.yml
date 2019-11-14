@@ -49,3 +49,5 @@ pending: "pending"
 role_addmin: 1
 fake_email: "aaaa@gmail.com"
 pass: "123456"
+page_user: 10
+xxx: "xxx-xxx-xxxx"

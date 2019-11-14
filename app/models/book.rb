@@ -9,7 +9,7 @@ class Book < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :rates, dependent: :destroy
   has_many :borroweds, through: :borrowed_details,
-    dependent: :restrict_with_error
+   dependent: :restrict_with_exception
   has_many :users, through: :comments
 
   validates :name, presence: true, length: {maximum: Settings.max_name_book}
