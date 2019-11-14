@@ -1,4 +1,6 @@
 class Admin::UsersController < AdminController
+  include UsersHelper
+
   before_action :find_user, except: %i(new index)
 
   def new
@@ -37,7 +39,6 @@ class Admin::UsersController < AdminController
       redirect_to admin_users_path
     end
   end
-
 
   private
 

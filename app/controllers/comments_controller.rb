@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :require_logged_in, :load_book, only: :create
+  before_action :load_book, only: :create
   before_action :load_comment, only: :destroy
 
   def new

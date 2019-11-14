@@ -1,6 +1,5 @@
 class BorrowedsController < ApplicationController
   before_action :find_borrowed, only: %i(edit update destroy)
-  before_action :logged_in_user, only: %i(edit update)
 
   def index
     @borroweds = current_user.borroweds.includes(:borrowed_details)

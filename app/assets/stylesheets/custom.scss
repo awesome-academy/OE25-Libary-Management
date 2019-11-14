@@ -829,10 +829,12 @@ a#edit-status-cancel {
     font-size: 33px;
     margin-left: 0;
   }
+
   h5 {
     font-size: 15px;
     line-height: 2rem;
   }
+
   h3 {
     font-size: 25px;
   }
@@ -894,4 +896,104 @@ h4#myModalLabel {
 
 .modal-header {
   position: relative;
+}
+
+.notice {
+  position: absolute;
+  font-weight: bold;
+  color: green;
+  right: 11rem;
+  top: 7rem;
+}
+
+.alert {
+  position: absolute;
+  color: red;
+  font-weight: bold;
+  right: 11rem;
+  top: 7rem;
+}
+
+a.btn.btn-success.create-book {
+  float: right;
+  margin-bottom: 2rem;
+}
+
+input#book_image {
+  margin-top: 2rem;
+}
+
+img#img_prev {
+  width: 290px;
+  height: 360px;
+}
+
+select#book_category_id, select#book_author_id {
+  width: 277px;
+  height: 2rem;
+  margin-top: 1rem;
+  background-color: $gray;
+}
+
+h4.detail_book {
+  display: inline;
+}
+
+ul {
+  list-style-type:none;
+}
+
+a#edit-status-cancel {
+  margin-left: -77px;
+  width: 6rem;
+}
+
+.p-one.simpleCart_shelfItem.jwe a img {
+  height: 300px;
+  width: 232px;
+}
+
+h4#myModalLabel {
+  position: absolute;
+}
+
+.modal-header {
+  position: relative;
+}
+
+input.btn.btn-primary.forget-password {
+  float: right;
+  margin-top: -40px;
+}
+
+.field.email {
+  display: inline;
+}
+
+.col-md-6.col-md-offset-3.forget-password {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.field .email input#user_email_forget {
+  margin-left: 3rem;
+  width: 20rem;
+}
+
+h1.forget-password {
+  margin-bottom: 5rem;
+}
+
+div#error_explanation h2, div#error_explanation ul li {
+  font-size: 16px;
+  color: red;
+}
+
+.actions {
+  margin-top: 2rem;
+}
+
+select#user_sex {
+  width: 34rem !important;
+  height: 2rem;
 }

@@ -1,6 +1,6 @@
 module BorrowedsHelper
   def current_borrowed
-    set_borrowed if logged_in?
+    set_borrowed if user_signed_in?
     @borrowed
   end
 

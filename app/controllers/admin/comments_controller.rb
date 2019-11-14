@@ -1,4 +1,6 @@
 class Admin::CommentsController < AdminController
+  include CommentsHelper
+
   before_action :load_comment, only: :destroy
 
   def index

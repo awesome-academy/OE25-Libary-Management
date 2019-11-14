@@ -45,10 +45,9 @@ User.create!(name: "Admin",
              phone: "0123456789",
              identity_card: "123456789",
              role: 1,
-             password: "menmen",
-             password_confirmation: "menmen",
-             activated: true,
-             activated_at: Time.zone.now)
+             password: "123456",
+             password_confirmation: "123456",
+             confirmed_at: Time.now)
 20.times do |n|
   name  = Faker::Name.name
   email = "user#{n+1}@gmail.com"
@@ -66,6 +65,5 @@ User.create!(name: "Admin",
                email: email,
                password: password,
                password_confirmation: password,
-               activated: true,
-               activated_at: Time.zone.now)
+               confirmed_at: Time.now)
 end

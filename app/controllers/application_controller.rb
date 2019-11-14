@@ -1,8 +1,16 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
   include BorrowedsHelper
 
   before_action :set_locale
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :authenticate_user!
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit :sign_up, keys: User::USER_PARAMS
+    devise_parameter_sanitizer.permit :account_update, keys: User::USER_PARAMS
+  end
 
   private
 
@@ -12,13 +20,5 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "login_again"
-    redirect_to login_url
   end
 end
