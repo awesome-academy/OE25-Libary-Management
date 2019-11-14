@@ -7,13 +7,11 @@ class SessionsController < ApplicationController
     if @user.authenticate(params[:session][:password])
       log_in @user
       flash[:success] = t "welcome"
-      user_activated
       if params[:session][:remember_me] == Settings.remember_me
         remember @user
       else
         forget @user
       end
-
       check_role_user
     else
       flash.now[:danger] = t "email_password"
@@ -30,28 +28,15 @@ class SessionsController < ApplicationController
 
   def check_user_present
     @user = User.find_by email: params[:session][:email].downcase
-    return if @user
+    return if @user&.activated?
 
     flash[:danger] = t "email_password"
     render :new
   end
 
-  def user_activated
-    if @user.activated?
-      log_in @user
-      if params[:session][:remember_me] == Settings.remember_me
-        remember @user
-      else
-        forget @user
-      end
-      redirect_back_or @user
-    else
-      flash[:warning] = t "account_not_activated_check_mail"
-      redirect_to root_url
   def check_role_user
-    check_user_present
     if @user.admin?
-      redirect_to admin_dashboard_path
+      redirect_to(admin_dashboard_path)
     else
       redirect_back_or @user
     end

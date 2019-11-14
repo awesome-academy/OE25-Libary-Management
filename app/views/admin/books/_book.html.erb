@@ -1,0 +1,15 @@
+<tr>
+  <td><%= book.name %></td>
+  <td><%= book.category_name %></td>
+  <td><%= book.author_name %> </td>
+  <td><%= book.publisher_name %></td>
+  <td><%= book.price %></td>
+  <td><%= book.rest_amount %></td>
+  <td>
+    <span>
+    <%= link_to admin_book_path(book), class: "book-btn" do %>
+      <%= t "show" %>
+    <% end %>
+    </span>
+  </td>
+</tr>

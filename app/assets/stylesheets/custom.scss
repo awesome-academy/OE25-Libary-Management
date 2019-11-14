@@ -91,6 +91,7 @@ form#search-form {
   position: absolute;
   top: 179px;
   left: 958px;
+  width: 19rem;
 }
 
 li.dropdown.show {
@@ -160,6 +161,7 @@ form#search_form {
   display: inline;
   position: absolute;
   top: 12px;
+  width: 19rem;
 }
 
 .menu_sec {
@@ -194,6 +196,9 @@ li.dropdown.show {
   line-height: normal;
 }
 
+input[type="submit"] {
+  float: right;
+}
 .field_with_errors input{
   border: 1px solid $red !important;
 }
@@ -345,7 +350,7 @@ ul.sidebar-menu {
 }
 
 #sidebar ul li.active ul.sub, #sidebar ul li ul.sub li a {
-  display: block;
+  display: none;
 }
 
 ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
@@ -373,34 +378,10 @@ ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
   color: $white;
 }
 
-#sidebar ul li a {
-  .arrow {
-    border-bottom: 4px solid transparent;
-    border-left: 4px solid $dark_gray;
-    border-top: 4px solid transparent;
-    float: right;
-    height: 0;
-    margin-right: 10px;
-    margin-top: 6px;
-    width: 0;
-  }
-  .menu-arrow {
-    float: right;
-    margin-right: 8px;
-    margin-top: 6px;
-  }
+ul.sidebar-menu li.active a i {
+  color: $white;
 }
 
-#sidebar ul li a .arrow.open {
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid $dark_gray;
-  float: right;
-  height: 0;
-  margin-right: 10px;
-  margin-top: 8px;
-  width: 0;
-}
 
 #sidebar ul li.active a .arrow, #sidebar ul li a:hover .arrow, #sidebar ul li a:focus .arrow {
   float: right;
@@ -477,20 +458,17 @@ ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
       border: none !important;
       border-radius: 4px;
       -webkit-border-radius: 4px;
-
-      li {
-        a {
-          border-bottom: 1px solid $very_light_gray !important;
-          font-size: 12px;
-          list-style: none;
-          padding: 15px 10px !important;
-          width: 100%;
-          display: inline-block;
-          &:hover {
-            background-color: $light_gray_blue !important;
-            color: #2E2E2E;
-            border-bottom: 1px solid $dark_grayish_cyan !important;
-          }
+      a {
+        border-bottom: 1px solid $very_light_gray !important;
+        font-size: 12px;
+        list-style: none;
+        padding: 15px 10px !important;
+        width: 100%;
+        display: inline-block;
+        &:hover {
+          background-color: $light_gray_blue !important;
+          color: #2E2E2E;
+          border-bottom: 1px solid $dark_grayish_cyan !important;
         }
       }
     }
@@ -561,4 +539,58 @@ ul.dropdown-menu.extended.logout.show li a {
   &:hover {
     color: $black;
   }
+}
+
+.product-one .col-md-3.product-left {
+  margin-top: 19px;
+}
+
+.pagination {
+  display: inline-block;
+  float: left;
+}
+
+.pagination span {
+  color: $black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination span.active {
+  background-color: $dark_moderate_lime_green;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination span:hover:not(.active) {
+  background-color: $very_light_gray;
+  border-radius: 5px;
+}
+
+table.table.table-bordered.table-hover {
+  width: 68rem;
+  margin-left: 0;
+}
+
+h2.title {
+  text-align: center;
+  margin-top: -28px;
+}
+
+a.book-btn {
+  background-color: $dark_gray;
+  padding: 7px;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  color: white;
+  &:hover {
+    background-color: #4a4a4a;
+    color: $white;
+  }
+}
+
+.flexslider.details-lft-inf.image-admin img {
+  width: 13rem;
+  height: 16rem;
 }

@@ -1,0 +1,20 @@
+<% provide :title, t("user_manage") %>
+<h2 class = "title"><%= t "user_manage" %></h2>
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><%= t "stt" %></th>
+      <th scope="col"><%= t "name_book" %></th>
+      <th scope="col"><%= t "category" %></th>
+      <th scope="col"><%= t "author" %></th>
+      <th scope="col"><%= t "publisher" %></th>
+      <th scope="col"><%= t "price" %></th>
+      <th scope="col"><%= t "rest_amount" %></th>
+      <th scope="col"><%= t "controll" %></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @books %>
+  </tbody>
+</table>
