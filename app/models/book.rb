@@ -5,10 +5,10 @@ class Book < ApplicationRecord
   belongs_to :author
   belongs_to :category
   belongs_to :publisher
-  has_many :borrowed_detail, dependent: :destroy
+  has_many :borrowed_details
   has_many :comments, dependent: :destroy
   has_many :rates, dependent: :destroy
-  has_many :borroweds, through: :borrowed_detail
+  has_many :borroweds, through: :borrowed_details, dependent: :restrict_with_error
   has_many :users, through: :comments
 
   validates :name, presence: true, length: {maximum: Settings.max_name_book}
@@ -25,4 +25,8 @@ class Book < ApplicationRecord
                     where("name LIKE :search",
                           search: "%#{parameter}%")
                   end)
+
+  def display_image
+    image.variant resize_to_limit: Settings.limit_size_image
+  end
 end

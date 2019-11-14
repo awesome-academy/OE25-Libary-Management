@@ -10,11 +10,11 @@
       <th scope="col"><%= t "publisher" %></th>
       <th scope="col"><%= t "price" %></th>
       <th scope="col"><%= t "rest_amount" %></th>
-      <th scope="col"><%= t "controll" %></th>
-
+      <th scope="col"><%= t "control" %></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class = "book_ajax_del">
     <%= render @books %>
   </tbody>
 </table>
+<%= paginate @books %>

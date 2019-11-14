@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       else
         forget @user
       end
-      check_role_user
+      redirect_back_or root_url
     else
       flash.now[:danger] = t "email_password"
       render :new
@@ -32,13 +32,5 @@ class SessionsController < ApplicationController
 
     flash[:danger] = t "email_password"
     render :new
-  end
-
-  def check_role_user
-    if @user.admin?
-      redirect_to(admin_dashboard_path)
-    else
-      redirect_back_or root_url
-    end
   end
 end

@@ -17,7 +17,7 @@
       <% end %>
     </span>
     <span>
-      <%= link_to admin_book_path(book), class: "book-btn" do %>
+      <%= link_to admin_book_path(book), method: :delete, data: { confirm: t("sure") }, class: "book-btn" do %>
         <i class="fa fa-trash"></i>
       <% end %>
     </span>

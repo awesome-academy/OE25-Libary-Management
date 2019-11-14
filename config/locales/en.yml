@@ -127,6 +127,7 @@ en:
   name_book: "Book name"
   publisher: "Publisher"
   price: "Price"
+  control: "Control"
   decription: "Decription"
   edit_book: "Edit book"
   edit_success: "Edit success"
@@ -134,3 +135,7 @@ en:
   control: "Control"
   index: Index
   author_deleted: Author delete
+  delete_book_fail: "Delete fail"
+  delete_book_success: "Delete success"
+  not_admin: "You are not admin"
+  book_in_borrowed: "Book is borrowed. Don't delelte"

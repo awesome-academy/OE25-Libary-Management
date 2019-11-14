@@ -1,6 +1,10 @@
 module BookAction
   extend ActiveSupport::Concern
 
+  included do
+    before_action :find_book, except: :index
+  end
+
   def index
     @books = if params[:search].blank?
                Book.includes(:author, :category, :publisher)
