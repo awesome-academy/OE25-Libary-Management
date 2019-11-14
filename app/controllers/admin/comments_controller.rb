@@ -2,7 +2,7 @@ class Admin::CommentsController < AdminController
   before_action :load_comment, only: :destroy
 
   def index
-    @comments = Comment.page(params[:page]).per Settings.page_book
+    @comments = Comment.page(params[:page]).per Settings.page_borrowed
   end
 
   def destroy

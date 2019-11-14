@@ -55,7 +55,7 @@ en:
   borrow_success: Borrowing books success
   borrow_success_not: Please check Borow day and Return day
   borrowed_day_fail: Must be after the start date
-  stt: Borrowed
+  stt: Index
   borrowed_book: Borrowed Book
   borrowed_day: Borrow Day
   return_day: Return Day
@@ -85,6 +85,7 @@ en:
   change: Change
   profile_update: Profile update
   update_false: Update false
+  update_success: Update success
   please_log_in: Please login
   hi: Hi
   click_on: Click on
@@ -167,3 +168,15 @@ en:
   errors_length_description: Errors length description
   user_updated: Profile update
   fail_sign_up: Create false
+  delete_book_fail: "Delete fail"
+  delete_book_success: "Delete success"
+  create_book_fail: "Create book fail"
+  create_book_success: "Create book success"
+  create_book: "Create New Book"
+  select_category: "Select Category"
+  select_author: "Select Author"
+  quantity: "Quantity"
+  borrowed: "Borrowed"
+  cancel: "Cancel"
+  paid: "Paid"
+  total: "Total"

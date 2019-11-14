@@ -26,7 +26,7 @@ search: 12
 size_cart: 0
 page_comment: 12
 maximum_content: 140
-page_borrowed: 10
+page_borrowed: 5
 reset_sent_at: 2
 limit_size_image: [240, 300]
 word_amount: 5
@@ -42,3 +42,7 @@ enum_user: 2
 enum_admin: 1
 name_author: 30
 description_author: 100
+borrowed: "borrowed"
+paid: "paid"
+cancel: "cancel"
+pending: "pending"

@@ -1,5 +1,6 @@
 <% provide :title, t("comment_manage") %>
 <h2 class = "title"><%= t "comment_manage" %></h2>
+<h5><%= t "total" %>: <%= size_comment %></h5>
 <table class="table table-bordered table-hover">
   <thead class="thead-dark">
     <tr>
@@ -14,3 +15,4 @@
     <%= render @comments %>
   </tbody>
 </table>
+<%= paginate @comments %>

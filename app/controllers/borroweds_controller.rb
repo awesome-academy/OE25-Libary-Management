@@ -4,6 +4,7 @@ class BorrowedsController < ApplicationController
 
   def index
     @borroweds = current_user.borroweds.includes(:borrowed_details)
+                             .page(params[:page]).per Settings.page_borrowed
   end
 
   def show
@@ -16,7 +17,7 @@ class BorrowedsController < ApplicationController
 
   def update
     if @borrowed.update borrow_params
-      flash.now[:success] = t "borrow_success"
+      flash[:success] = t "borrow_success"
       session.delete(:borrowed_id)
       redirect_to borroweds_path
     else

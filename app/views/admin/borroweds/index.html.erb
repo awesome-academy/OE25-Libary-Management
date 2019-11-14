@@ -1,0 +1,19 @@
+<% provide :title, t("borowed_book") %>
+<h2 class = "title"><%= t "borowed_book" %></h2>
+<h5><%= t "total" %>: <%= size_borrowed %></h5>
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><%= t "stt" %></th>
+      <th scope="col"><%= t "user_name" %></th>
+      <th scope="col"><%= t "borrow_book" %></th>
+      <th scope="col"><%= t "borrow_day" %></th>
+      <th scope="col"><%= t "return_day" %></th>
+      <th scope="col"><%= t "status" %></th>
+    </tr>
+  </thead>
+  <tbody class = "book_ajax_del">
+    <%= render @borroweds %>
+  </tbody>
+</table>
+<%= paginate @borroweds %>

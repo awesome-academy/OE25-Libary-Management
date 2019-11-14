@@ -1,0 +1,35 @@
+<% provide :title, t("borrowed_book") %>
+<h3><%= t "user" %>: <%= @borrowed.user_name %></h3>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 ">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><%= t "stt" %></th>
+            <th scope="col"><%= t "name_book" %></th>
+            <th scope="col"><%= t "category" %></th>
+            <th scope="col"><%= t "author" %></th>
+            <th scope="col"><%= t "publisher" %></th>
+            <th scope="col"><%= t "price" %></th>
+            <th scope="col"><%= t "quantity" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @borrowed.borrowed_details.each do |borrowed_detail| %>
+            <tr>
+              <td><%= borrowed_detail.book_name %></td>
+              <td><%= borrowed_detail.book_category_name %></td>
+              <td><%= borrowed_detail.book_author_name %> </td>
+              <td><%= borrowed_detail.book_publisher_name %></td>
+              <td><%= borrowed_detail.book_price %></td>
+              <td><%= borrowed_detail.quantity %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= render "button_change_status" %>

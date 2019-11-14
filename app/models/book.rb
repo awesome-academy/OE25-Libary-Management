@@ -26,7 +26,6 @@ class Book < ApplicationRecord
                     where("name LIKE :search",
                           search: "%#{parameter}%")
                   end)
-
   def display_image
     image.variant resize_to_limit: Settings.limit_size_image
   end

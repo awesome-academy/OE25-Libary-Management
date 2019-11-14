@@ -92,6 +92,10 @@ ul.dropdown-menu {
   }
 }
 
+ul.dropdown-menu.show li a {
+  text-align: left;
+}
+
 form#search-form {
   display: inline;
   position: absolute;
@@ -213,13 +217,48 @@ ul.errors {
   margin-top: 2rem;
 }
 
-td.status {
+td.status-paid {
   position: absolute;
   display: inline;
   background-color: $very_dark_grayish_violet;
   border-radius: 10px;
   height: 39px;
   color: $white;
+  text-align: center;
+  width: 5rem;
+}
+
+td.status-borrowed {
+  position: absolute;
+  display: inline;
+  background-color: $dark_lime_green;
+  border-radius: 10px;
+  height: 39px;
+  color: $white;
+  width: 5rem;
+  text-align: center;
+}
+
+td.status-pending {
+  position: absolute;
+  display: inline;
+  background-color: $vivid_yellow;
+  border-radius: 10px;
+  height: 39px;
+  width: 5rem;
+  color: $white;
+  text-align: center;
+}
+
+td.status-cancel {
+  position: absolute;
+  display: inline;
+  background-color: $bright_red;
+  border-radius: 10px;
+  height: 39px;
+  color: $white;
+  width: 5rem;
+  text-align: center;
 }
 
 label.required:after {
@@ -638,6 +677,13 @@ ul.list-group.list-group-flush {
   height: 200px;
 }
 
+.cart-item.cyc {
+  margin-right: 6em;
+  img {
+    width: 203px;
+    height: 250px;
+  }
+}
 .col-md-9.cart-items {
   margin-top: 6rem;
   h1 {
@@ -646,6 +692,7 @@ ul.list-group.list-group-flush {
   }
   h5 {
     font-size: 15px;
+    line-height: 2rem;
   }
   h3 {
     font-size: 25px;
@@ -653,8 +700,11 @@ ul.list-group.list-group-flush {
 }
 
 .alert {
-  width: 20rem;
+  width: 17rem;
   margin-bottom: -39px;
+  position: absolute;
+  left: 0;
+  top: 2rem;
 }
 
 ul.list-group.list-group-flush {
@@ -737,4 +787,18 @@ select#book_category_id, select#book_author_id {
 
 h4.detail_book {
   display: inline;
+}
+
+ul {
+  list-style-type:none;
+}
+
+a#edit-status-cancel {
+  margin-left: -77px;
+  width: 6rem;
+}
+
+.p-one.simpleCart_shelfItem.jwe a img {
+  height: 300px;
+  width: 232px;
 }

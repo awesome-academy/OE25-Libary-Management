@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <% if @borrowed.pending? %>
+      <div class="col-sm-1 col-sm-push-5">
+        <%= link_to admin_borrowed_path(@borrowed, status: Borrowed.statuses[Settings.borrowed]),method: :patch, class: "btn btn-success" do %>
+          <%= t "borrowed" %>
+        <% end %>
+      </div>
+      <div class="col-sm-1 col-sm-push-6">
+        <%= link_to admin_borrowed_path(@borrowed, status: Borrowed.statuses[Settings.cancel]),method: :patch, class: "btn btn-danger" do %>
+          <%= t "cancel" %>
+        <% end %>
+      </div>
+    <% elsif @borrowed.borrowed? %>
+      <div class="col-sm-1 col-sm-push-5">
+        <%= link_to admin_borrowed_path(@borrowed, status: Borrowed.statuses[Settings.paid]),method: :patch, class: "btn btn-success" do %>
+        <%= t "paid" %>
+        <% end %>
+      </div>
+      <div class="col-sm-1 col-sm-push-6">
+        <%= link_to admin_borrowed_path(@borrowed, status: Borrowed.statuses[Settings.cancel]),method: :patch, class: "btn btn-danger" do %>
+          <%= t "cancel" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<tr data-link="<%= admin_borrowed_path borrowed %>">
+  <td><%= borrowed.user_name %></td>
+  <td>
+    <ul>
+      <% borrowed.borrowed_details.each do |borrowed_detail| %>
+        <li><%= borrowed_detail.book_name %></li>
+      <% end %>
+    </ul>
+  </td>
+  <td><%= borrowed.borrow_day %> </td>
+  <td><%= borrowed.return_day %></td>
+  <td><%= borrowed.status %></td>
+</tr>
