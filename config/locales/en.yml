@@ -153,3 +153,10 @@ en:
   edit_fail: Edit fail
   edit_author: Edit author
   create_author: Create author
+  delete_book_fail: "Delete fail"
+  delete_book_success: "Delete success"
+  create_book_fail: "Create book fail"
+  create_book_success: "Create book success"
+  create_book: "Create New Book"
+  select_category: "Select Category"
+  select_author: "Select Author"

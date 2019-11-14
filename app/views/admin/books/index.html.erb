@@ -1,5 +1,9 @@
 <% provide :title, t("user_manage") %>
 <h2 class = "title"><%= t "user_manage" %></h2>
+<%= link_to new_admin_book_path, class: "btn btn-success create-book" do %>
+  <i class="fa fa-plus"></i>
+  <%= t "create_book" %>
+<% end %>
 <table class="table table-bordered table-hover">
   <thead class="thead-dark">
     <tr>

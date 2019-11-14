@@ -2,7 +2,7 @@ module BookAction
   extend ActiveSupport::Concern
 
   included do
-    before_action :find_book, except: :index
+    before_action :find_book, except: %i(index new create)
   end
 
   def index

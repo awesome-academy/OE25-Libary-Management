@@ -153,3 +153,10 @@ vi:
   edit_fail: Sửa thất bại
   edit_author: Cập nhật thông tin tác giả
   create_author: Thêm tác giả
+  delete_book_fail: "Xóa không thành công"
+  delete_book_success: "Xóa sách thành công"
+  create_book_fail: "Tạo sách không thành công"
+  create_book_success: "Tạo sách thành công"
+  create_book: "Tạo sách mới"
+  select_category: "Chọn thể loại"
+  select_author: "Chọn tên tác giả"
