@@ -2,9 +2,6 @@
   <div class="p-one simpleCart_shelfItem jwe">
     <%= link_to book_path(book) do %>
       <%= image_tag book.display_image, alt: "img-responsive", class: "img-responsive" %>
-      <div class="mask">
-        <span><%= t "quick_view" %></span>
-      </div>
     <% end %>
     <div class="title_book">
       <%= book.name %>

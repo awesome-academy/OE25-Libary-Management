@@ -185,3 +185,5 @@ en:
   confirm_account: "Confirm my account"
   characters_minimum: characters minimum
   user_not_authorize: "You not authorize"
+  category_fail: "Category fail"
+  delete_borrowed_details_success: "Delete success"

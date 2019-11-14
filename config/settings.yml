@@ -41,10 +41,10 @@ enum_user: 2
 enum_admin: 1
 name_author: 30
 description_author: 100
-borrowed: "borrowed"
-paid: "paid"
-cancel: "cancel"
-pending: "pending"
+borrowed: 2
+paid: 3
+cancel: 4
+pending: 1
 role_addmin: 1
 fake_email: "aaaa@gmail.com"
 pass: "123456"

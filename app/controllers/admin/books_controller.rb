@@ -1,6 +1,7 @@
 class Admin::BooksController < AdminController
   include BooksHelper
 
+  load_and_authorize_resource
   before_action :find_book, except: %i(new index create)
 
   def new

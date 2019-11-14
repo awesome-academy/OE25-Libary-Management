@@ -1,0 +1,16 @@
+<nav class="category">
+  <ul class="category">
+    <% category_parent.each do |category| %>
+      <li class="grid">
+        <%= link_to category.name, category_path(category), class: "color1" %>
+        <% if category.children.any? %>
+          <ul class="sub-category">
+            <% category.children.each do |subcategory| %>
+              <li><%= link_to subcategory.name, category_path(subcategory), class: "color2" %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

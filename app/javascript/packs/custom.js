@@ -26,4 +26,9 @@ $(document).ready(function(){
   setTimeout(function(){
     $('p.alert').remove();
   }, 3000);
+
+  $(document).on('click', 'tr[data-link]', function(){
+    window.location = $(this).data('link')
+  });
 });
+

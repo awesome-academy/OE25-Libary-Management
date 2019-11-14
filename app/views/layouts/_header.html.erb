@@ -1,55 +1,73 @@
 <div class="top_bg">
   <div class="container">
-    <div class="header_top-sec">
-      <div class="top_left">
-          <ul>
+    <div class="row">
+      <div class="col-sm-4">
+        <%= form_tag books_path, method: :get, id: :search_form do %>
+        <%= text_field_tag :search, params[:search], placeholder: t("search") %>
+        <%= submit_tag t("search") %>
+        <% end %>
+      </div>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-5">
+        <div class="row">
+          <div class="col-sm-8">
             <li class="top_link">
               <%= t "contact" %>:
               <%= link_to Settings.mail, "#" %>
             </li>
+          </div>
+          <div class="col-sm-4">
             <% if user_signed_in? %>
-              <li class="dropdown">
+            <li class="dropdown">
                 <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-                  <%= current_user.name %>
-                <% end %>
-                <ul class="dropdown-menu">
-                  <li>
-                    <%= link_to current_user do %>
-                      <i class="fa fa-user"></i>
-                      <%= t("profile") %>
-                    <% end %>
-                  </li>
-                  <li>
-                    <%= link_to edit_profile_path do %>
-                      <i class="fa fa-cog"></i>
-                      <%= t("settings") %>
-                      <% end %>
-                  </li>
-                  <li>
-                    <%= link_to borroweds_path do %>
-                      <i class="fa fa-opencart"></i>
-                      <%= t "borrowed_book" %>
-                    <% end %>
-                  </li>
-                  <% if current_user.admin? %>
-                    <li>
-                      <%= link_to admin_dashboard_path do %>
-                        <i class="fa fa-book"></i>
-                        <%= t "library_management" %>
-                      <% end %>
-                    </li>
+                <%= current_user.name %>
+              <% end %>
+              <ul class="dropdown-menu">
+                <li>
+                  <%= link_to current_user do %>
+                    <i class="fa fa-user"></i>
+                    <%= t("profile") %>
                   <% end %>
-                  <li><%= link_to t("log_out"), logout_path, method: :delete %></li>
-                </ul>
                 </li>
+                <li>
+                  <%= link_to edit_profile_path do %>
+                    <i class="fa fa-cog"></i>
+                    <%= t("settings") %>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to borroweds_path do %>
+                    <i class="fa fa-opencart"></i>
+                    <%= t "borrowed_book" %>
+                  <% end %>
+                </li>
+                <% if current_user.admin? %>
+                  <li>
+                    <%= link_to admin_dashboard_path do %>
+                    <i class="fa fa-book"></i>
+                    <%= t "library_management" %>
+                    <% end %>
+                  </li>
+                <% end %>
+                <li><%= link_to t("log_out"), logout_path, method: :delete %></li>
+              </ul>
+            </li>
             <% else %>
-              <button type="button" class="btn btn-light "><%= link_to t("log_in"), login_path %></button>
+              <button type="button" class="btn btn-light"><%= link_to t("log_in"), login_path %></button>
             <% end %>
-          </ul>
-      </div>
-      <div class="clearfix"> </div>
+          </div>
+        </div>
+
+
+      </ul>
     </div>
   </div>
+  <div class="header_top-sec">
+    <div class="top_left">
+
+    </div>
+  </div>
+</div>
 </div>
 <div class="header_top">
   <div class="container">
@@ -57,24 +75,24 @@
       <%= link_to t("library_management"), root_url %>
     </div>
     <% if user_signed_in? %>
-      <div class="header_right">
-        <div class="cart box_1">
-          <%= link_to "#" do %>
-            <div class="total">
-              <% if session[:borrowed_id] && current_borrowed.borrowed_details.size != Settings.size_cart %>
-                <%= link_to borrowed_path current_borrowed do %>
-                  <%= t "cart" %>(<strong id ="size_card"><%= current_borrowed.borrowed_details.size %></strong>)
-                  <%= image_tag("cart.png") %>
-                <% end %>
-              <% else %>
-                <%= t "empty_cart" %>
-                <%= image_tag("cart.png") %>
-              <% end %>
-            </div>
+    <div class="header_right">
+      <div class="cart box_1">
+        <%= link_to "#" do %>
+        <div class="total">
+          <% if session[:borrowed_id] && current_borrowed.borrowed_details.size != Settings.size_cart %>
+          <%= link_to borrowed_path current_borrowed do %>
+          <%= t "cart" %>(<strong id ="size_card"><%= current_borrowed.borrowed_details.size %></strong>)
+          <%= image_tag("cart.png") %>
           <% end %>
-          <div class="clearfix"> </div>
+          <% else %>
+          <%= t "empty_cart" %>
+          <%= image_tag("cart.png") %>
+          <% end %>
         </div>
+        <% end %>
+        <div class="clearfix"> </div>
       </div>
+    </div>
     <% end %>
     <div class="clearfix"></div>
   </div>
@@ -82,18 +100,7 @@
 <div class="mega_nav">
   <div class="container">
     <div class="menu_sec">
-      <ul class="megamenu skyblue">
-        <li class="active grid"><%= link_to t("home"), root_url, class: "color1" %></li>
-        <li class="grid"><%= link_to t("economic_book"), "#", class: "color1" %></li>
-        <li><%= link_to t("foregin_literature"), "#", class: "color1" %></li>
-        <li><%= link_to t("domestic_literature"), "#", class: "color1" %></li>
-        <li><%= link_to t("novel"), "#", class: "color1" %></li>
-        <li><%= link_to t("new_book"), "#", class: "color1" %></li>
-      </ul>
-      <%= search_form_for @q, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
-        <%= f.search_field :name_or_author_name_cont, placeholder: t("search"), class: "form-control" %>
-        <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
-      <% end %>
+      <%= render "categories/category" %>
       <div class="clearfix"></div>
     </div>
   </div>

@@ -6,13 +6,12 @@ end
 
 6.times do |n|
   name = Faker::Name.name
-  parent_id =  nil
-  Category.create!(name: name, parent_id: parent_id)
+  Category.create!(name: name)
 end
 
-10.times do |n|
+20.times do |n|
   name = Faker::Name.name
-  parent_id =  rand(10) + 1
+  parent_id =  rand(5) + 1
   Category.create!(name: name, parent_id: parent_id)
 end
 
@@ -22,10 +21,10 @@ end
   Publisher.create!(name: name, address: address)
 end
 
-49.times do |n|
+99.times do |n|
   name = Faker::Name.name
   author_id = rand(49) + 1
-  category_id = rand(10) + 1
+  category_id = rand(25) + 1
   publisher_id = rand(20) + 1
   price = 200000
   rest_amount = 20

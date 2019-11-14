@@ -1,6 +1,7 @@
 class Admin::UsersController < AdminController
   include UsersHelper
   before_action :find_user, except: %i(new index)
+  load_and_authorize_resource
 
   def new
     @user = User.new

@@ -201,3 +201,4 @@ vi:
   confirm_account: "Xác thực tài khoản"
   characters_minimum: "Số kí tự nhỏ nhất"
   user_not_authorize: "Bạn không được cấp quyền này"
+  category_fail: "Không có thể loại này"

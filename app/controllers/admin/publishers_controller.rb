@@ -1,5 +1,6 @@
 class Admin::PublishersController < AdminController
   before_action :load_publisher, except: %i(index create new)
+  load_and_authorize_resource
 
   def show; end
 

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user
+  load_and_authorize_resource :user
 
   def show; end
 
