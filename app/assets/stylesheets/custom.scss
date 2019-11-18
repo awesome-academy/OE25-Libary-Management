@@ -1,0 +1,47 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "colors.scss";
+
+#module_topcategories .category {
+  background: $white-light;
+  font-family: "Times New Roman",Times,serif;
+  padding: 0;
+  height: 38px;
+  margin-bottom: 18px;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: $-internal-root-color;
+  color: $green;
+  border-radius: 23px;
+
+  a.title-cate {
+    display: inline;
+    background-color: $blue-dark;
+    padding: 8px 8px 7px 8px;
+    border-radius: 25px;
+    color: $white;
+  }
+  a.more {
+    float: right;
+    padding-right: 1rem;
+    padding-top: 5px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    color: $blue-dark;
+    font-size: 18px;
+  }
+}
+
+button.btn.btn-light a {
+    color: #4e4a4a;
+    font-weight: 600;
+}
+
+button.btn.btn-light:hover {
+    background-color: #17a2b8;
+}
