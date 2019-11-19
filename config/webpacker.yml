@@ -7,7 +7,7 @@ default: &default
   check_yarn_integrity: false
   webpack_compile_output: true
 
-  resolved_paths: []
+  resolved_paths: ['vendor/assets']
 
   cache_manifest: false
 

@@ -1,21 +1,21 @@
 default: &default
   adapter: mysql2
   encoding: utf8mb4
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: ENV["USERNAME_DB"]
   password: ENV["PASSWORD_DB"]
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: library_manage_development
+  database: OE25_Libary_Management_development
 
 test:
   <<: *default
-  database: library_manage_test
+  database: OE25_Libary_Management_test
 
 production:
   <<: *default
-  database: library_manage_development
-  username: ENV["USERNAME_DB"]
-  password: ENV["PASSWORD_DB"]
+  database: OE25_Libary_Management_production
+  username: OE25_Libary_Management
+  password: <%= ENV['OE25_LIBARY_MANAGEMENT_DATABASE_PASSWORD'] %>
