@@ -1,0 +1,25 @@
+<div class="col-md-2 product-left">
+  <div class="p-one simpleCart_shelfItem jwe">
+    <%= link_to book_path(book) do %>
+      <%= image_tag book.image, alt: "img-responsive", class: "img-responsive" %>
+      <div class="mask">
+        <span><%= t "quick_view" %></span>
+      </div>
+    <% end %>
+    <div class="title_book">
+      <%= book.name %>
+    </div>
+    <div class="product-left-cart">
+      <div class="product-left-cart-l">
+        <p>
+          <%= link_to "#", class: "item_add" do %>
+            <span class=" item_price">
+              <%= Settings.price %>
+            </span>
+          <% end %>
+        </p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>

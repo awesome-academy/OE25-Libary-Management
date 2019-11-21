@@ -16,3 +16,6 @@ en:
   category: "Category"
   signin: "Signin"
   signup: "Signup"
+  quanity: "Quanity"
+  home: "Home"
+  not_found_book: "Book not found"
