@@ -1,21 +1,33 @@
 en:
-  email: "Email"
-  my_account: "My Account"
-  library_management: "Library Management"
-  item: "Items"
-  empty_cart: "Empty Cart"
-  home: "Home"
-  economic_book: "Economic book"
-  foregin_literature: "Foregin literature"
-  domestic_literature: "Domestic literature"
-  novel: "Novel"
-  new_book: "New books"
-  footer_copy: "© 2019 Libary Management | Design by Bui Thi Men & Hoa Thi Huong"
-  view_all: "View all"
-  quick_view: "Quick View"
-  category: "Category"
-  signin: "Signin"
-  signup: "Signup"
-  quanity: "Quanity"
-  home: "Home"
-  not_found_book: "Book not found"
+  email: Email
+  my_account: My Account
+  library_management: Library Management
+  item: Items
+  empty_cart: Empty Cart
+  home: Home
+  economic_book: Economic book
+  foregin_literature: Foregin literature
+  domestic_literature: Domestic literature
+  novel: Novel
+  new_book: New books
+  footer_copy: © 2019 Libary Management | Design by Bui Thi Men & Hoa Thi Huong
+  view_all: View all
+  quick_view: Quick View
+  category: Category
+  signin: Signin
+  signup: Signup
+  quanity: Quanity
+  not_found_book: Book not found
+  name: Name
+  sex: Sex
+  phone: Phone
+  birth: Bird of date
+  password: Password
+  password_confirmation: Password Confirmation
+  address: Adress
+  identity_card: Identity card
+  create_account: Create account
+  please_check: Please check your email to activate your account.
+  create_false: Create false
+  the_form_contains: The form contains
+  not_found: User not found

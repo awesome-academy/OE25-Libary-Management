@@ -1,21 +1,34 @@
 vi:
-  email: "Email"
-  my_account: "Tài Khoản"
-  library_management: "Quản lý thư viện"
-  item: "Quyển "
-  empty_cart: "Giỏ sách"
-  home: "Trang chủ"
-  economic_book: "Sách kinh tế"
-  foregin_literature: "Văn học nước ngoài "
-  domestic_literature: "Văn học trong nước"
-  novel: "Tiểu thuyết"
-  new_book: "Sách mới"
-  footer_copy: "© 2019 Quản lý thư viện | Bùi Thị Mến & Hòa Thị Hường"
-  view_all: "Xem tất cả"
-  quick_view: "Xem trước"
-  category: "Danh mục"
-  signin: "Đăng ký"
-  signup: "Đăng nhập"
-  quanity: "Số lượng"
-  home: "Trang chủ"
-  not_found_book: "Sách không được tìm thấy"
+  email: Email
+  my_account: Tài Khoản
+  library_management: Quản lý thư viện
+  item: Quyển
+  empty_cart: Giỏ sách
+  home: Trang chủ
+  economic_book: Sách kinh tế
+  foregin_literature: Văn học nước ngoài
+  domestic_literature: Văn học trong nước
+  novel: Tiểu thuyết
+  new_book: Sách mới
+  footer_copy: © 2019 Quản lý thư viện | Bùi Thị Mến & Hòa Thị Hường
+  view_all: Xem tất cả
+  quick_view: Xem trước
+  category: Danh mục
+  signin: Đăng ký
+  signup: Đăng nhập
+  quanity: Số lượng
+  not_found_book: Không tìm thấy sách
+  name: Họ tên
+  sex: Giới tính
+  phone: Số điện thoại
+  birth: Ngày sinh
+  password: Mật khẩu
+  password_confirmation: Nhập lại mật khẩu
+  address: Địa chỉ
+  identity_card: Số CMND
+  create_account: Tạo tài khoản
+  please_check: Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn.
+  create_false: Không thành công
+  the_form_contains: Biểu mẫu có chứa
+  not_found: Không tìm thấy
+

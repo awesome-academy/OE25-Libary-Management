@@ -9,3 +9,13 @@ max_name_category: 100
 max_name_book: 200
 max_decription_book: 500
 page_book: 12
+valid_email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
+maximum_name: 50
+maximum_email: 255
+minimum_password: 6
+maximum_phone: 15
+maximum_address: 100
+maximum_identity_card: 15
+enum_sold_out: 0
+enum_active: 1
+enum_archived: 2
