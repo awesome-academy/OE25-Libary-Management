@@ -112,15 +112,17 @@ ActiveRecord::Schema.define(version: 2019_11_19_092707) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
-    t.string "sex"
+    t.integer "sex"
     t.date "birth"
     t.string "email"
     t.string "address"
     t.string "phone"
     t.string "identity_card"
-    t.integer "role"
+    t.integer "role", default: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -5,7 +5,7 @@ class Book < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :rates, dependent: :destroy
 
-  validates :name, presence: true, length: {maximum: Settings.max_name_book }
+  validates :name, presence: true, length: {maximum: Settings.max_name_book}
   validates :price, :amount, :rest_amount, numericality: true
   validates :decription, length: {maximum: Settings.max_decription_book}
 

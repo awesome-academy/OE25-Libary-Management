@@ -22,7 +22,6 @@ end
   Publisher.create!(name: name, address: address)
 end
 
-
 49.times do |n|
   name = Faker::Name.name
   author_id = rand(49) + 1
@@ -37,4 +36,33 @@ end
     .join("app", "assets", "images", "default_cover.jpg")),
     filename: "default_cover.jpg"
   book.save
+end
+
+User.create!(name: "Bui Thi Men",
+             sex: "female",
+             birth: "12-11-1998",
+             email: "menbt@gmail.com",
+             address: "aaaaaaaaaa",
+             phone: "0123456789",
+             identity_card: "123456789",
+             role: 1,
+             password: "menmen",
+             password_confirmation: "menmen")
+20.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@gmail.com"
+  password = "password"
+  role = 2
+  address = Faker::Address.city
+  phone = Faker::PhoneNumber.cell_phone
+  User.create!(name: name,
+               sex: "female",
+               birth: "12-11-1998",
+               address: address,
+               phone: phone,
+               identity_card: rand(1234567890),
+               role: 2,
+               email: email,
+               password: password,
+               password_confirmation: password)
 end
