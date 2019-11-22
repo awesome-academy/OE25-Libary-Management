@@ -38,10 +38,27 @@
 }
 
 button.btn.btn-light a {
-    color: #4e4a4a;
+    color: $very_dark_grayish_red;
     font-weight: 600;
 }
 
 button.btn.btn-light:hover {
-    background-color: #17a2b8;
+    background-color: $strong_cyan;
+}
+
+.col-md-2.product-left {
+    margin-top: 10px;
+}
+
+.flexslider.details-lft-inf img {
+    width: 356px;
+    height: 505px;
+}
+
+h4.author_book {
+    color: black !important;
+}
+
+.details-left-info .simpleCart_shelfItem {
+    margin-bottom: 5rem;
 }

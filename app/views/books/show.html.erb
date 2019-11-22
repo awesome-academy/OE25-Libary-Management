@@ -1,0 +1,23 @@
+<% provide :tittle, @book.name %>
+<div class="single">
+  <div class="container">
+    <div class="single-page">
+      <div class="flexslider details-lft-inf">
+        <%= image_tag @book.image %>
+      </div>
+    </div>
+    <div class="details-left-info">
+      <h3><%= @book.name %></h3>
+      <h4 class = "author_book"><%= @book.author_name %></h4>
+      <div class="simpleCart_shelfItem">
+        <p><span class="item_price qwe"><%= @book.price %> đ</span>
+        <p class="qty"><%= t "quanity" %></p><input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+        <div class="single-but item_add">
+          <input type="submit" value="add to cart">
+        </div>
+      </div>
+      <p class="desc"><%= @book.decription %></p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

@@ -16,3 +16,6 @@ vi:
   category: "Danh mục"
   signin: "Đăng ký"
   signup: "Đăng nhập"
+  quanity: "Số lượng"
+  home: "Trang chủ"
+  not_found_book: "Sách không được tìm thấy"

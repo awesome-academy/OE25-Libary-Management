@@ -2494,11 +2494,11 @@ label.radio {
 	.ut a {
 	  width: 90% !important;
 	}
-	.product-left {
-	  float: left;
-	    width: 33.33%;
-		margin-bottom: 2em;
-	}
+  .product-left {
+    float: left;
+    width: 33.33%;
+  	margin-bottom: 2em;
+  }
 	.mask {
 	  top: 36%;
 	  left:31%;
