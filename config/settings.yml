@@ -19,3 +19,4 @@ maximum_identity_card: 15
 enum_sold_out: 0
 enum_active: 1
 enum_archived: 2
+remember_me: 1

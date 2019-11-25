@@ -31,4 +31,12 @@ vi:
   create_false: Không thành công
   the_form_contains: Biểu mẫu có chứa
   not_found: Không tìm thấy
-
+  login: Đăng nhập
+  new_user: Người dùng mới?
+  sign_up_now: Đăng ký ngay!
+  log_out: Thoát
+  profile: Hồ sơ
+  settings: Cài đặt
+  remember_me_on_this_computer: Nhớ tài khoản trên máy tính này
+  contact: Liên hệ
+  email_password: Email hoặc mật khẩu không đúng
