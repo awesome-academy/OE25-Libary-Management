@@ -11,9 +11,10 @@
       <h4 class = "author_book"><%= @book.author_name %></h4>
       <div class="simpleCart_shelfItem">
         <p><span class="item_price qwe"><%= @book.price %> đ</span>
-        <p class="qty"><%= t "quanity" %></p><input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+        <p class="qty"><%= t "quanity" %></p>
+        <%= number_field_tag "quantity",Settings.min_quantity, min: Settings.min_quantity, class: "form-control input-small" %>
         <div class="single-but item_add">
-          <input type="submit" value="add to cart">
+          <%= button_to t("borrow"), borrowed_details_path(book_id: @book.id), class: "btn btn-btn-primary " %>
         </div>
       </div>
       <p class="desc"><%= @book.decription %></p>

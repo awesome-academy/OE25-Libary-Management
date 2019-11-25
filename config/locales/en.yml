@@ -2,8 +2,7 @@ en:
   email: Email
   my_account: My Account
   library_management: Library Management
-  item: Items
-  empty_cart: Empty Cart
+  cart: Book Cart
   home: Home
   economic_book: Economic book
   foregin_literature: Foregin literature
@@ -40,3 +39,7 @@ en:
   remember_me_on_this_computer: Remember me on this computer
   contact: Contact
   email_password: Invalid email/password combination
+  borrow: "Borrow"
+  quanity: Quanity
+  borrow_book: Borrow book
+  not_found_book: "Not found book"

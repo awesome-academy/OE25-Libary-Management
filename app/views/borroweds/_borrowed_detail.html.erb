@@ -1,0 +1,19 @@
+<% @borrowed_details.each do |borrowed_detail| %>
+  <div class="cart-header">
+    <div class="cart-sec simpleCart_shelfItem">
+      <div class="cart-item cyc">
+        <%= image_tag borrowed_detail.book.image %>
+      </div>
+    </div>
+    <%=  borrowed_detail.book.name %>
+    <div class="cart-item-info">
+      <ul class="qty">
+        <li><p><%= t "quantity" %>:<%= borrowed_detail.quantity %></p></li>
+      </ul>
+      <div class="delivery">
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+<% end %>
