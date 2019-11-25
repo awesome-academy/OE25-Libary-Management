@@ -32,21 +32,18 @@
 <div class="header_top">
   <div class="container">
     <div class="logo">
-      <%= link_to t("library_management"), "#" %>
+      <%= link_to t("library_management"), root_url %>
     </div>
     <div class="header_right">
       <div class="cart box_1">
         <%= link_to "#" do %>
           <div class="total">
             <span class="simpleCart_total"></span>
-            (<span id="simpleCart_quantity" class="simpleCart_quantity"></span>
-            <%= t "item" %>)
+            <span id="simpleCart_quantity" class="simpleCart_quantity"></span>
+            <%= t "cart" %>
             <%= image_tag("cart.png") %>
           </div>
         <% end %>
-        <p>
-          <%= link_to t("empty_cart"), "javascript:", class: "simpleCart_empty" %>
-        </p>
         <div class="clearfix"> </div>
       </div>
     </div>
@@ -57,7 +54,7 @@
    <div class="container">
      <div class="menu_sec">
      <ul class="megamenu skyblue">
-      <li class="active grid"><%= link_to t("home"), "#", class: "color1" %></li>
+      <li class="active grid"><%= link_to t("home"), root_url, class: "color1" %></li>
       <li class="grid"><%= link_to t("economic_book"), "#", class: "color1" %></li>
       <li><%= link_to t("foregin_literature"), "#", class: "color1" %></li>
       <li><%= link_to t("domestic_literature"), "#", class: "color1" %></li>
