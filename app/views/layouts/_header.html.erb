@@ -1,20 +1,29 @@
 <div class="top_bg">
   <div class="container">
     <div class="header_top-sec">
-      <div class="top_right">
-        <ul>
-         <button type="button" class="btn btn-light "><%= link_to t("signin"), "#" %></button>
-         <button type="button" class="btn btn-light "><%= link_to t("signup"), signup_path %></button>
-        </ul>
-      </div>
       <div class="top_left">
-        <ul>
-          <li class="top_link">
-            <%= t "email" %>:
-            <%= link_to Settings.mail, "#" %>
-          </li>
-          <li class="top_link"><%= link_to t("my_account"), "#" %></li>
-        </ul>
+          <ul>
+            <li class="top_link">
+              <%= t "contact" %>:
+              <%= link_to Settings.mail, "#" %>
+            </li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+              <%= current_user.name %>
+              <b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu">
+              <li><%= link_to t("profile"), current_user %></li>
+              <li><%= link_to t("settings"), edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li><%= link_to t("log_out"), logout_path, method: :delete %></li>
+            </ul>
+            </li>
+            <% else %>
+            <button type="button" class="btn btn-light "><%= link_to t("log_in"), login_path %></button>
+          <% end %>
+          </ul>
       </div>
       <div class="clearfix"> </div>
     </div>

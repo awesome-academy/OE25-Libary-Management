@@ -31,3 +31,12 @@ en:
   create_false: Create false
   the_form_contains: The form contains
   not_found: User not found
+  login: Login
+  new_user: New user?
+  sign_up_now: Sign up now!
+  log_out: Logout
+  profile: Profile
+  settings: Settings
+  remember_me_on_this_computer: Remember me on this computer
+  contact: Contact
+  email_password: Invalid email/password combination
