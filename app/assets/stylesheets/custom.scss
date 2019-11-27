@@ -84,3 +84,23 @@ ul.dropdown-menu {
   background-color: $black;
   white-space: nowrap;
 }
+
+form#search-form {
+  display: inline;
+  position: absolute;
+  top: 179px;
+  left: 958px;
+}
+
+li.dropdown.show {
+   ul.dropdown-menu {
+    visibility: visible;
+    li {
+      display: block;
+      text-align: left;
+    }
+  }
+}
+li.dropdown ul.dropdown-menu {
+  visibility: hidden;
+}

@@ -22,6 +22,9 @@ class ApplicationController < ActionController::Base
         @current_borrowed = Borrowed.create
         session[:borrowed_id] = @current_borrowed.id
       end
+    else
+      @current_borrowed = Borrowed.create
+      session[:borrowed_id] = @current_borrowed.id
     end
   end
 end

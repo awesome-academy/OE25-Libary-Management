@@ -1,0 +1,7 @@
+<% provide :title, t("result_search") %>
+<% if @books.present? %>
+  <%= render @books %>
+  <%= paginate @books %>
+<% else %>
+  <p><%= t "there_are_no_book" %> <%= params[:search] %>.</p>
+<% end %>

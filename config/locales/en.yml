@@ -30,7 +30,7 @@ en:
   create_false: Create false
   the_form_contains: The form contains
   not_found: User not found
-  login: Login
+  log_in: Login
   new_user: New user?
   sign_up_now: Sign up now!
   log_out: Logout
@@ -45,3 +45,6 @@ en:
   not_found_book: "Not found book"
   not_save: "Book not save"
   save_success: "Add book to cart success"
+  there_are_no_book: There are no book
+  search: Search
+  result_search: Result search

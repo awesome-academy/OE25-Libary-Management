@@ -22,3 +22,4 @@ enum_archived: 2
 remember_me: 1
 min_quantity: 1
 step_quantity: 1
+search: 12
