@@ -1,0 +1,15 @@
+<% provide :title, t("borrow_book") %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"><%= t "stt" %></th>
+      <th scope="col"><%= t "borrowed_book" %></th>
+      <th scope="col"><%= t "borrowed_day" %></th>
+      <th scope="col"><%= t "return_day" %></th>
+      <th scope="col"><%= t "status" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @borroweds %>
+  </tbody>
+</table>

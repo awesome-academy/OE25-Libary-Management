@@ -16,6 +16,7 @@
             <ul class="dropdown-menu">
               <li><%= link_to t("profile"), current_user %></li>
               <li><%= link_to t("settings"), edit_user_path(current_user) %></li>
+              <li><%= link_to t("borrowed_book"), borroweds_path %></li>
               <li class="divider"></li>
               <li><%= link_to t("log_out"), logout_path, method: :delete %></li>
             </ul>
@@ -34,19 +35,26 @@
     <div class="logo">
       <%= link_to t("library_management"), root_url %>
     </div>
-    <div class="header_right">
-      <div class="cart box_1">
-        <%= link_to "#" do %>
-          <div class="total">
-            <span class="simpleCart_total"></span>
-            <span id="simpleCart_quantity" class="simpleCart_quantity"></span>
-            <%= t "cart" %>
-            <%= image_tag("cart.png") %>
-          </div>
-        <% end %>
-        <div class="clearfix"> </div>
+    <% if logged_in? %>
+      <div class="header_right">
+        <div class="cart box_1">
+          <%= link_to "#" do %>
+            <div class="total">
+              <% if session[:borrowed_id] %>
+                <%= link_to borrowed_path current_borrowed do %>
+                  <%= t "cart" %>
+                  <%= image_tag("cart.png") %>
+                <% end %>
+              <% else %>
+                <%= t "empty_cart" %>
+                <%= image_tag("cart.png") %>
+              <% end %>
+            </div>
+          <% end %>
+          <div class="clearfix"> </div>
+        </div>
       </div>
-    </div>
+    <% end %>
     <div class="clearfix"></div>
   </div>
 </div>

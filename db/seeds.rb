@@ -38,10 +38,10 @@ end
   book.save
 end
 
-User.create!(name: "Bui Thi Men",
+User.create!(name: "Admin",
              sex: "female",
              birth: "12-11-1998",
-             email: "menbt@gmail.com",
+             email: "admin@gmail.com",
              address: "aaaaaaaaaa",
              phone: "0123456789",
              identity_card: "123456789",
@@ -50,8 +50,8 @@ User.create!(name: "Bui Thi Men",
              password_confirmation: "menmen")
 20.times do |n|
   name  = Faker::Name.name
-  email = "example-#{n+1}@gmail.com"
-  password = "password"
+  email = "user#{n+1}@gmail.com"
+  password = "123456"
   role = 2
   address = Faker::Address.city
   phone = Faker::PhoneNumber.cell_phone

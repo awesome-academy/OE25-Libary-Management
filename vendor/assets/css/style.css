@@ -42,7 +42,7 @@ body a:hover{
 }
 .top_left{
 	float: right;
-	color:#fff;
+	color:#f1cccc;
 	font-family: 'Monda', sans-serif;
 }
 .top_right{
@@ -86,15 +86,16 @@ body a:hover{
 .top_left ul li a{
 	text-align:center;
 	padding: 0px 4px;
-	font-size:13px;
+	font-size: 14px;
 	color:#ffffff;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 .top_right ul li a:hover,.top_left ul li a:hover{
-	color:#3F3D3D;
+	color:#574848;
 	text-decoration: none;
 }
 .item_add:hover{
