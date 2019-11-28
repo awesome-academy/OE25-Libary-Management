@@ -1,4 +1,4 @@
-<div class="col-md-2 product-left">
+<div class="col-md-3 product-left">
   <div class="p-one simpleCart_shelfItem jwe">
     <%= link_to book_path(book) do %>
       <%= image_tag book.image, alt: "img-responsive", class: "img-responsive" %>
@@ -18,6 +18,8 @@
             </span>
           <% end %>
         </p>
+        <%= button_to t("borrow"), borrowed_details_path(book_id: book.id),
+          class: "btn btn-btn-dark" %>
       </div>
       <div class="clearfix"> </div>
     </div>

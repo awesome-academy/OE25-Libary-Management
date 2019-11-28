@@ -2,8 +2,7 @@ vi:
   email: Email
   my_account: Tài Khoản
   library_management: Quản lý thư viện
-  item: Quyển
-  empty_cart: Giỏ sách
+  cart: Giỏ sách
   home: Trang chủ
   economic_book: Sách kinh tế
   foregin_literature: Văn học nước ngoài
@@ -40,3 +39,9 @@ vi:
   remember_me_on_this_computer: Nhớ tài khoản trên máy tính này
   contact: Liên hệ
   email_password: Email hoặc mật khẩu không đúng
+  borrow: "Mượn"
+  quanity: Số lượng
+  borrow_book: Mượn sách
+  not_found_book: Không tìm được sách
+  not_save: "Sách chưa được thêm vào giỏ"
+  save_success: "Đã thêm vào giỏ"
