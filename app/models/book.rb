@@ -11,4 +11,9 @@ class Book < ApplicationRecord
 
   has_one_attached :image
   delegate :name, to: :author, prefix: :author
+
+  scope :search, (lambda do |parameter|
+                    where("name LIKE :search",
+                          search: "%#{parameter}%")
+                  end)
 end

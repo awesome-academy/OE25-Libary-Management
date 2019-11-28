@@ -30,7 +30,7 @@ vi:
   create_false: Không thành công
   the_form_contains: Biểu mẫu có chứa
   not_found: Không tìm thấy
-  login: Đăng nhập
+  log_in: Đăng nhập
   new_user: Người dùng mới?
   sign_up_now: Đăng ký ngay!
   log_out: Thoát
@@ -45,3 +45,6 @@ vi:
   not_found_book: Không tìm được sách
   not_save: "Sách chưa được thêm vào giỏ"
   save_success: "Đã thêm vào giỏ"
+  there_are_no_book: Không có sách
+  search: Tìm kiếm
+  result_search: Kết quả tìm kiếm

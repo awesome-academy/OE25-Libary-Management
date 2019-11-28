@@ -21,7 +21,7 @@
             </ul>
             </li>
             <% else %>
-            <button type="button" class="btn btn-light "><%= link_to t("log_in"), login_path %></button>
+           <button type="button" class="btn btn-light "><%= link_to t("log_in"), login_path %></button>
           <% end %>
           </ul>
       </div>
@@ -51,23 +51,21 @@
   </div>
 </div>
 <div class="mega_nav">
-   <div class="container">
-     <div class="menu_sec">
-     <ul class="megamenu skyblue">
-      <li class="active grid"><%= link_to t("home"), root_url, class: "color1" %></li>
-      <li class="grid"><%= link_to t("economic_book"), "#", class: "color1" %></li>
-      <li><%= link_to t("foregin_literature"), "#", class: "color1" %></li>
-      <li><%= link_to t("domestic_literature"), "#", class: "color1" %></li>
-      <li><%= link_to t("novel"), "#", class: "color1" %></li>
-      <li><%= link_to t("new_book"), "#", class: "color1" %></li>
-    </ul>
-      <div class="search">
-         <form>
-          <input type="text" value="" placeholder="Search...">
-          <input type="submit" value="">
-          </form>
-      </div>
+  <div class="container">
+    <div class="menu_sec">
+      <ul class="megamenu skyblue">
+        <li class="active grid"><%= link_to t("home"), root_url, class: "color1" %></li>
+        <li class="grid"><%= link_to t("economic_book"), "#", class: "color1" %></li>
+        <li><%= link_to t("foregin_literature"), "#", class: "color1" %></li>
+        <li><%= link_to t("domestic_literature"), "#", class: "color1" %></li>
+        <li><%= link_to t("novel"), "#", class: "color1" %></li>
+        <li><%= link_to t("new_book"), "#", class: "color1" %></li>
+      </ul>
+      <%= form_tag books_path, method: :get, id: :search_form do %>
+        <%= text_field_tag :search, params[:search], placeholder: t("search") %>
+        <%= submit_tag t("search") %>
+      <% end %>
       <div class="clearfix"></div>
-     </div>
     </div>
+  </div>
 </div>
