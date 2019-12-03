@@ -1,16 +1,17 @@
 class BorrowedDetailsController < ApplicationController
   before_action :load_book, only: :create
+  before_action :logged_in_user
 
   def create
-    if @current_borrowed.books.include? @chosen_book
+    if current_borrowed.books.include? @chosen_book
       find_chosen_book
       @borrowed_detail.quantity += Settings.step_quantity
       save_borrowed_detail
     else
-      @current_borrowed.borrowed_details.create book_id: @chosen_book.id
+      current_borrowed.borrowed_details.create book_id: @chosen_book.id
     end
 
-    redirect_to borrowed_path @current_borrowed
+    redirect_to borrowed_path current_borrowed
   end
 
   def destroy; end
@@ -30,8 +31,8 @@ class BorrowedDetailsController < ApplicationController
   end
 
   def find_chosen_book
-    @borrowed_detail = @current_borrowed.borrowed_details
-                                        .find_by book_id: @chosen_book.id
+    @borrowed_detail = current_borrowed.borrowed_details
+                                       .find_by book_id: @chosen_book.id
     return if @borrowed_detail
 
     flash[:danger] = t "not_found_book"

@@ -1,0 +1,9 @@
+<%= form_for @borrowed do |f| %>
+  <%= f.label t "borrow_day" %>
+  <%= f.date_field :borrow_day, class: "form-control" %>
+
+  <%= f.label t "return_day" %>
+  <%= f.date_field :return_day, class: "form-control" %>
+
+  <%= f.submit t("borrow"), class: "btn btn-primary edit-borrow" %>
+<% end %>

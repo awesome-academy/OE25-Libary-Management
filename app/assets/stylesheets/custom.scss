@@ -22,7 +22,7 @@
   a.title-cate {
     display: inline;
     background-color: $blue-dark;
-    padding: 8px 8px 7px 8px;
+    padding: 3px 8px 7px 8px;
     border-radius: 25px;
     color: $white;
   }
@@ -76,6 +76,7 @@ h4.author_book {
   width: auto;
   margin-left: 0;
 }
+
 ul.dropdown-menu {
   padding: 3px 20px;
   clear: both;
@@ -93,7 +94,8 @@ form#search-form {
 }
 
 li.dropdown.show {
-   ul.dropdown-menu {
+  display: inline !important;
+  ul.dropdown-menu {
     visibility: visible;
     li {
       display: block;
@@ -101,6 +103,69 @@ li.dropdown.show {
     }
   }
 }
+
 li.dropdown ul.dropdown-menu {
   visibility: hidden;
+}
+
+a.btn.btn-primary.btn-lg.borrow {
+    margin-top: 50px;
+    margin-left: 15rem;
+    width: 8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+form.edit_borrowed {
+  padding: 5rem 15rem 5rem 15rem;
+  line-height: 4rem ;
+}
+
+.container {
+  table.table.table-hover {
+    width: 60rem;
+    margin-left: 5rem;
+  }
+
+  tr {
+    border-bottom: 1px solid rgb(244, 244, 244);
+    height: 5rem;
+  }
+
+  table tbody tr::before {
+    counter-increment: my-sec-counter;
+    content: counter(my-sec-counter);
+    margin-left: 38px;
+  }
+}
+
+ul.a {
+  list-style-type: circle;
+}
+
+body {
+  counter-reset: my-sec-counter;
+}
+
+input#search {
+    width: 14rem;
+}
+
+form#search_form {
+  display: inline;
+  position: absolute;
+  top: 12px;
+}
+
+.menu_sec {
+  position: relative;
+}
+
+.top_left ul li.top_link,.top_left ul li.top_link a {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+li.dropdown.show {
+    display: inline !important;
 }

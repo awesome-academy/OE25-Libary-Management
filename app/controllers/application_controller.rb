@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  include BorrowedsHelper
 
-  before_action :set_locale, :current_borrowed
+  before_action :set_locale
 
   private
 
@@ -13,18 +14,11 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
-  def current_borrowed
-    if session[:borrowed_id]
-      borrowed = Borrowed.find_by id: session[:borrowed_id]
-      if borrowed.present?
-        @current_borrowed = borrowed
-      else
-        @current_borrowed = Borrowed.create
-        session[:borrowed_id] = @current_borrowed.id
-      end
-    else
-      @current_borrowed = Borrowed.create
-      session[:borrowed_id] = @current_borrowed.id
-    end
+  def logged_in_user
+    return if logged_in?
+
+    store_location
+    flash[:danger] = t "login_again"
+    redirect_to login_url
   end
 end

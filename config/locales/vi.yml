@@ -48,3 +48,17 @@ vi:
   there_are_no_book: Không có sách
   search: Tìm kiếm
   result_search: Kết quả tìm kiếm
+  borrow_day: "Ngày mượn"
+  return_day: "Ngày trả"
+  not_found_borrowed: "Không tìm thấy"
+  login_again: "Hãy đăng nhập trước"
+  empty_cart: Giỏ sách (trống)
+  borrow_success: "Đã mượn sách thành công"
+  borrow_success_not: "Không thể mượn sách"
+  borrowed_day_fail: "Nhập lại ngày mượn"
+  stt: "Lần mượn"
+  borrowed_book: "Sách mượn"
+  borrowed_day: "Ngày mượn"
+  return_day: "Ngày trả"
+  Status: "Trạng thái"
+  day_not_past: "Ngày mượn không được trong quá khứ"

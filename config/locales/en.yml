@@ -48,3 +48,17 @@ en:
   there_are_no_book: There are no book
   search: Search
   result_search: Result search
+  borrow_day: "Borrow day"
+  return_day: "Return day"
+  not_found_borrowed: "Not found Borrowed"
+  login_again: "Please login before"
+  empty_cart: Book Cart (empty)
+  borrow_success: "Borrowing books success"
+  borrow_success_not: "Please check Borow day and Return day"
+  borrowed_day_fail: "Must be after the start date"
+  stt: "Borrowed"
+  borrowed_book: "Borrowed Book"
+  borrowed_day: "Borrow Day"
+  return_day: "Return Day"
+  Status: "Status"
+  day_not_past: "can't be in the past"
