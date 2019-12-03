@@ -14,7 +14,10 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
-  def show; end
+  def show
+    @comments = @book.comments.includes :user
+    @new_comment = @book.comments.new
+  end
 
   private
 

@@ -1,0 +1,11 @@
+<%= form_for @new_comment, remote: true do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label t "comment" %>
+  <%= f.text_area :content, class: "form-control commentbox", placeholder: t("comment") %>
+
+  <%= f.hidden_field :book_id, value: @book.id %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <br>
+  <%= f.submit t("comment") %>
+<% end %>

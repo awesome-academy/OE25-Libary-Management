@@ -66,3 +66,16 @@ en:
   delete_borrowed_details_fail: "Delete fail"
   not_book: "No book in cart book, Please choose book"
   sure: "Are you sure?"
+  delete: Delete
+  your_comment_has_been_booked: Your comment has been booked
+  comment_deleted: Comment deleted
+  please_log_in: Please log in
+  comment: Comment
+  comments: 
+    one: "%{count} comment"
+    other: "%{count} comments"
+  you_sure: You sure?
+  delete_false: Delete false
+  error:
+    one: "%{count} error"
+    other: "%{count} errors"

@@ -21,6 +21,15 @@
         <% end %>
       </div>
       <p class="desc"><%= @book.decription %></p>
+      <div id="comment-form">
+        <%= render "comments/comment_form" if logged_in? %>
+      </div>
+      <div id="comments-count">
+        <%= t "comments", count: @comments.size %>
+      </div>
+      <div id="comments-list">
+        <%= render @comments %>
+      </div>
     </div>
     <div class="clearfix"></div>
   </div>
