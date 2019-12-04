@@ -3,12 +3,14 @@ class BorrowedDetailsController < ApplicationController
   before_action :logged_in_user
 
   def create
+    quantity = params[:quantity] ? params[:quantity] : Settings.step_quantity
     if current_borrowed.books.include? @chosen_book
       find_chosen_book
-      @borrowed_detail.quantity += Settings.step_quantity
+      @borrowed_detail.quantity += quantity.to_i
       save_borrowed_detail
     else
-      current_borrowed.borrowed_details.create book_id: @chosen_book.id
+      current_borrowed.borrowed_details.create book_id: @chosen_book.id,
+        quantity: quantity
     end
 
     redirect_to borrowed_path current_borrowed

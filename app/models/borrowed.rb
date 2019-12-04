@@ -22,8 +22,8 @@ class Borrowed < ApplicationRecord
   end
 
   def day_cannot_be_in_the_past
-    if borrow_day.present? && borrow_day < Date.today
-      errors.add :borrow_day, I18n.t("day_not_past")
-    end
+    return unless borrow_day.present? && borrow_day < Time.zone.today
+
+    errors.add :borrow_day, I18n.t("day_not_past")
   end
 end

@@ -11,11 +11,14 @@
       <h4 class = "author_book"><%= @book.author_name %></h4>
       <div class="simpleCart_shelfItem">
         <p><span class="item_price qwe"><%= @book.price %> đ</span>
-        <p class="qty"><%= t "quanity" %></p>
-        <%= number_field_tag :quantity, Settings.min_quantity, min: Settings.min_quantity, class: "form-control input-small" %>
-        <div class="single-but item_add">
-          <%= button_to t("borrow"), borrowed_details_path(book_id: @book.id), class: "btn btn-btn-primary " %>
-        </div>
+        <%= form_tag borrowed_details_path do %>
+          <p class="qty"><%= t "quanity" %></p>
+          <%= number_field_tag :quantity, Settings.min_quantity, {min: Settings.min_quantity, class: "form-control input-small"} %>
+          <%= hidden_field_tag :book_id, @book.id %>
+          <div class="single-but item_add">
+            <%= submit_tag t("borrow"), class: "btn btn-primary" %>
+          </div>
+        <% end %>
       </div>
       <p class="desc"><%= @book.decription %></p>
     </div>

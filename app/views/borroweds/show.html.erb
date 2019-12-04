@@ -1,12 +1,13 @@
 <% provide :title, t("cart") %>
 <div class="container">
-  <div class="check">
-    <div class="col-md-3 cart-total"></div>
-    <div class="col-md-9 cart-items">
-      <h1><%= t "borrow_book" %></h1>
-      <%= render "borrowed_detail" %>
-      <%= link_to t("borrow"), edit_borrowed_path(id: current_borrowed.id), class: "btn btn-primary btn-lg borrow" %>
+  <div class="row">
+    <div class="check">
+      <div class="col-md-9 cart-items">
+        <h1><%= t "borrow_book" %></h1>
+        <%= render "borrowed_detail" %>
+        <%= link_to t("borrow"), edit_borrowed_path(id: current_borrowed.id), class: "btn btn-primary btn-lg borrow" %>
+      </div>
     </div>
+    <div class="clearfix"> </div>
   </div>
-  <div class="clearfix"> </div>
 </div>
