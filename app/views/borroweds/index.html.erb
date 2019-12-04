@@ -10,7 +10,9 @@
       <th scope="col"><%= t "status" %></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class = "sort_paginate_ajax">
     <%= render borrowed_present %>
   </tbody>
+  <%= paginate borrowed_present %>
+
 </table>

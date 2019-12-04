@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
     resources :users
     resources :books
-    resources :borroweds, except: %i(create destroy new)
+    resources :borroweds, except: %i(create new)
     resources :borrowed_details, only: %i(create destroy)
     resources :borroweds, only: %i(show)
     resources :comments, only: %i(create destroy)

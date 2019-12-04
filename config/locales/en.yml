@@ -71,7 +71,7 @@ en:
   comment_deleted: Comment deleted
   please_log_in: Please log in
   comment: Comment
-  comments: 
+  comments:
     one: "%{count} comment"
     other: "%{count} comments"
   you_sure: You sure?
@@ -79,3 +79,4 @@ en:
   error:
     one: "%{count} error"
     other: "%{count} errors"
+  close: "Close"

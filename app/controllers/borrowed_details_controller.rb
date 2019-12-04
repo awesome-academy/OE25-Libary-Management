@@ -18,9 +18,7 @@ class BorrowedDetailsController < ApplicationController
 
   def destroy
     if @borrowed_detail.destroy
-      respond_to do |format|
-        format.js
-      end
+      respond_to :js
     else
       flash.now[:danger] = t "delete_borrowed_details_fail"
       redirect_to root_url

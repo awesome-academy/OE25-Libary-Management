@@ -1,5 +1,5 @@
 class BorrowedsController < ApplicationController
-  before_action :find_borrowed, only: %i(edit update)
+  before_action :find_borrowed, only: %i(edit update destroy)
   before_action :logged_in_user, only: %i(edit update)
 
   def index
@@ -24,7 +24,15 @@ class BorrowedsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    if @borrowed.destroy
+      respond_to :js
+    else
+      respond_to do |format|
+        format.js {render "alert(#{t("delete_borrowed_details_fail")});"}
+      end
+    end
+  end
 
   private
 

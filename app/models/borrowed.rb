@@ -1,4 +1,6 @@
 class Borrowed < ApplicationRecord
+  BORROWED_PARAMS = %i(borrow_day return_day user_id).freeze
+
   belongs_to :user
   has_many :borrowed_details, dependent: :destroy
   has_many :books, through: :borrowed_details
@@ -8,9 +10,9 @@ class Borrowed < ApplicationRecord
 
   enum status: {pending: 0, borrowed: 1, paid: 2}
 
-  BORROWED_PARAMS = %i(borrow_day return_day user_id).freeze
   delegate :name, to: :books, prefix: true
 
+  scope :borrowed_present_borrow_day, ->{where.not borrow_day: nil}
   private
 
   def return_day_after_borrow_day
