@@ -40,9 +40,9 @@
         <div class="cart box_1">
           <%= link_to "#" do %>
             <div class="total">
-              <% if session[:borrowed_id] %>
+              <% if session[:borrowed_id] && current_borrowed.borrowed_details.size != Settings.size_cart %>
                 <%= link_to borrowed_path current_borrowed do %>
-                  <%= t "cart" %>(<%= current_borrowed.borrowed_details.size %>)
+                  <%= t "cart" %>(<strong id ="size_card"><%= current_borrowed.borrowed_details.size %></strong>)
                   <%= image_tag("cart.png") %>
                 <% end %>
               <% else %>

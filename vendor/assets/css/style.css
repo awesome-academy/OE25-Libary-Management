@@ -1035,8 +1035,8 @@ p.non span{
   width: 28px;
   height: 28px;
   position: absolute;
-  right: 0px;
-  top:45px;
+  right: 0;
+  top:0;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
@@ -1044,6 +1044,7 @@ p.non span{
 }
 .cart-header {
   position: relative;
+  margin-left: 9rem;
 }
 .cart-header2 {
   position: relative;
@@ -1149,6 +1150,7 @@ ul.total_price li.last_price span{
 .cart-items h1 {
   font-size: 1.5em;
   margin-bottom:2em;
+  margin-top: -3rem;
 }
 a.item_add1 {
   border-top-left-radius: 0;

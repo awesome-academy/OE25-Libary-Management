@@ -62,3 +62,6 @@ vi:
   return_day: "Ngày trả"
   Status: "Trạng thái"
   day_not_past: "Ngày mượn không được trong quá khứ"
+  delete_borrowed_details_fail: "Xóa không thành công"
+  not_book: "Không có cuốn sách nào trong giỏ sách"
+  sure: "Bạn có chắc muốn xóa không?"

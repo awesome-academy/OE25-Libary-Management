@@ -4,7 +4,7 @@
     <div class="check">
       <div class="col-md-9 cart-items">
         <h1><%= t "borrow_book" %></h1>
-        <%= render "borrowed_detail" %>
+        <%= render @borrowed_details %>
         <%= link_to t("borrow"), edit_borrowed_path(id: current_borrowed.id), class: "btn btn-primary btn-lg borrow" %>
       </div>
     </div>

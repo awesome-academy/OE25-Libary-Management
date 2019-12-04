@@ -4,17 +4,19 @@ module BorrowedsHelper
     @borrowed
   end
 
-  def borroweds_present_day
-    current_user.borroweds.select {|borrowed| borrowed.borrow_day.present? }
+  def borrowed_present
+    current_user.borroweds.select{|borrowed| borrowed.borrow_day.present?}
   end
 
-  private
+  def borroweds_present_day
+    current_user.borroweds.select{|borrowed| borrowed.borrow_day.present?}
+  end
 
   def set_borrowed
-    return if @borrowed = current_user.borroweds.find_by(id: session[:borrowed_id])
+    return if @borrowed = current_user.borroweds
+                                      .find_by(id: session[:borrowed_id])
 
     @borrowed = current_user.borroweds.create
     session[:borrowed_id] = @borrowed.id
   end
-
 end

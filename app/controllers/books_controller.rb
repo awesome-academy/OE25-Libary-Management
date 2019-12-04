@@ -7,9 +7,7 @@ class BooksController < ApplicationController
              else
                Book.search(params[:search].downcase)
              end
-
     @books = @books.page(params[:page]).per Settings.page_book
-
   end
 
   def new
