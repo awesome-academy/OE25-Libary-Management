@@ -2,8 +2,14 @@ class BooksController < ApplicationController
   before_action :find_book, only: :show
 
   def index
-    @books = params[:search].blank? ? Book : Book.search(params[:search].downcase)
+    @books = if params[:search].blank?
+               Book
+             else
+               Book.search(params[:search].downcase)
+             end
+
     @books = @books.page(params[:page]).per Settings.page_book
+
   end
 
   def new

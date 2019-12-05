@@ -117,7 +117,7 @@ a.btn.btn-primary.btn-lg.borrow {
 }
 
 form.edit_borrowed {
-  padding: 5rem 15rem 5rem 15rem;
+  padding: 2rem 15rem 3rem 15rem;
   line-height: 4rem ;
 }
 
@@ -130,6 +130,7 @@ form.edit_borrowed {
   tr {
     border-bottom: 1px solid rgb(244, 244, 244);
     height: 5rem;
+    position: relative;
   }
 
   table tbody tr::before {
@@ -168,4 +169,26 @@ form#search_form {
 
 li.dropdown.show {
     display: inline !important;
+}
+
+.field_with_errors input{
+  border: 1px solid $red !important;
+}
+
+ul.errors {
+  margin-top: 2rem;
+}
+
+td.status {
+  position: absolute;
+  display: inline;
+  background-color: $very_dark_grayish_violet;
+  border-radius: 18px;
+  height: 39px;
+  color: $white;
+}
+
+label.required:after {
+  content: " *";
+  color: $red;
 }

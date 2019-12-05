@@ -20,7 +20,6 @@ class BorrowedsController < ApplicationController
       session.delete(:borrowed_id)
       redirect_to borroweds_path
     else
-      flash.now[:danger] = t "borrow_success_not"
       render :edit
     end
   end

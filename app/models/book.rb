@@ -12,7 +12,8 @@ class Book < ApplicationRecord
   validates :decription, length: {maximum: Settings.max_decription_book}
 
   has_one_attached :image
-  delegate :name, to: :author, prefix: :author
+  delegate :name, to: :author, prefix: true
+  delegate :name, to: :category, prefix: true
 
   scope :search, (lambda do |parameter|
                     where("name LIKE :search",

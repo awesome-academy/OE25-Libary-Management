@@ -42,7 +42,7 @@
             <div class="total">
               <% if session[:borrowed_id] %>
                 <%= link_to borrowed_path current_borrowed do %>
-                  <%= t "cart" %>
+                  <%= t "cart" %>(<%= current_borrowed.borrowed_details.size %>)
                   <%= image_tag("cart.png") %>
                 <% end %>
               <% else %>

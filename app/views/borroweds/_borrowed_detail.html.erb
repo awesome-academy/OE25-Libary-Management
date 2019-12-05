@@ -5,7 +5,11 @@
         <%= image_tag borrowed_detail.book_image %>
       </div>
     </div>
-    <%= borrowed_detail.book_name %>
+    <h3><%= borrowed_detail.book_name %></h3>
+    <h5>
+      <br><%= t "author" %><%= borrowed_detail.book_author_name %>
+      <br><%= t "category" %><%= borrowed_detail.book_category_name %>
+    </h5>
     <div class="cart-item-info">
       <ul class="qty">
         <li><p><%= t "quantity" %>:<%= borrowed_detail.quantity %></p></li>
