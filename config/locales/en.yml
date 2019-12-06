@@ -63,3 +63,6 @@ en:
   Status: "Status"
   day_not_past: "can't be in the past"
   author: "Author"
+  delete_borrowed_details_fail: "Delete fail"
+  not_book: "No book in cart book, Please choose book"
+  sure: "Are you sure?"

@@ -1,0 +1,5 @@
+$('#borrowed_detail_<%= @borrowed_detail.id %>').remove();
+$('#size_card').html('<%= current_borrowed.borrowed_details.size %>');
+<% if current_borrowed.borrowed_details.size == Settings.size_cart %>
+  $(".borrow").remove();
+<% end %>
