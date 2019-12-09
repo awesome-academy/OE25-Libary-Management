@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
       end
     else
       @new_comment = @comment
-      respond_to do |format|
+      respond_to do |_format|
         render @book
       end
     end

@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: {maximum: Settings.maximum_email},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: true
   validates :password, presence: true, length: {minimum:
-    Settings.minimum_password}
+    Settings.minimum_password}, allow_nil: true
   validates :phone, presence: true, length: {maximum:
     Settings.maximum_phone}
   validates :address, length: {maximum: Settings.maximum_address}

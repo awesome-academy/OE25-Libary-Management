@@ -13,6 +13,7 @@ gem "figaro"
 gem "i18n-js"
 gem "image_processing", "1.9.3"
 gem "jbuilder", "~> 2.7"
+gem "jquery-rails"
 gem "kaminari"
 gem "mini_magick", "4.9.5"
 gem "mysql2", ">= 0.4.4"
@@ -22,7 +23,6 @@ gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
-gem "jquery-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

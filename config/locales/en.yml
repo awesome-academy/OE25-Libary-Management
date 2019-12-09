@@ -39,33 +39,33 @@ en:
   remember_me_on_this_computer: Remember me on this computer
   contact: Contact
   email_password: Invalid email/password combination
-  borrow: "Borrow"
+  borrow: Borrow
   quanity: Quanity
   borrow_book: Borrow book
-  not_found_book: "Not found book"
-  not_save: "Book not save"
-  save_success: "Add book to cart success"
+  not_found_book: Not found book
+  not_save: Book not save
+  save_success: Add book to cart success
   there_are_no_book: There are no book
   search: Search
   result_search: Result search
-  borrow_day: "Borrow day"
-  return_day: "Return day"
-  not_found_borrowed: "Not found Borrowed"
-  login_again: "Please login before"
+  borrow_day: Borrow day
+  return_day: Return day
+  not_found_borrowed: Not found Borrowed
+  login_again: Please login before
   empty_cart: Book Cart (empty)
-  borrow_success: "Borrowing books success"
-  borrow_success_not: "Please check Borow day and Return day"
-  borrowed_day_fail: "Must be after the start date"
-  stt: "Borrowed"
-  borrowed_book: "Borrowed Book"
-  borrowed_day: "Borrow Day"
-  return_day: "Return Day"
-  Status: "Status"
-  day_not_past: "can't be in the past"
-  author: "Author"
-  delete_borrowed_details_fail: "Delete fail"
-  not_book: "No book in cart book, Please choose book"
-  sure: "Are you sure?"
+  borrow_success: Borrowing books success
+  borrow_success_not: Please check Borow day and Return day
+  borrowed_day_fail: Must be after the start date
+  stt: Borrowed
+  borrowed_book: Borrowed Book
+  borrowed_day: Borrow Day
+  return_day: Return Day
+  Status: Status
+  day_not_past: can't be in the past
+  author: Author
+  delete_borrowed_details_fail: Delete fail
+  not_book: No book in cart book, Please choose book
+  sure: Are you sure?
   delete: Delete
   your_comment_has_been_booked: Your comment has been booked
   comment_deleted: Comment deleted
@@ -80,3 +80,10 @@ en:
     one: "%{count} error"
     other: "%{count} errors"
   close: "Close"
+  edit_user: Edit user
+  save_changes: Save changes
+  update_your_profile: Update your profile
+  change: Change
+  profile_update: Profile update
+  update_false: Update false
+  please_log_in: Please login
