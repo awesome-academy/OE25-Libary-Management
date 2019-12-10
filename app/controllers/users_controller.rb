@@ -2,14 +2,18 @@ class UsersController < ApplicationController
   before_action :load_user, :logged_in_user, only: %i(show edit update)
   before_action :correct_user, only: %i(edit update)
 
+  def show; end
+
   def new
     @user = User.new
   end
 
+  def edit; end
+
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
+      @user.send_activation_email
       flash[:info] = t "please_check"
       redirect_to root_url
     else
@@ -17,10 +21,6 @@ class UsersController < ApplicationController
       render :new
     end
   end
-
-  def show; end
-
-  def edit; end
 
   def update
     if @user.update user_params
@@ -38,9 +38,12 @@ class UsersController < ApplicationController
     params.require(:user).permit User::USER_PARAMS
   end
 
+  def correct_user
+    redirect_to(root_url) unless current_user? @user
+  end
+
   def load_user
-    @user = User.find_by id: params[:id]
-    return if @user
+    return if @user = User.find_by(id: params[:id])
 
     flash[:danger] = t "not_found"
     redirect_to root_url
@@ -52,9 +55,5 @@ class UsersController < ApplicationController
     store_location
     flash[:danger] = t "please_log_in"
     redirect_to login_url
-  end
-
-  def correct_user
-    redirect_to(root_url) unless current_user? @user
   end
 end

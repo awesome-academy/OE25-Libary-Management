@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+  get 'password_resets/edit'
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
@@ -14,5 +16,7 @@ Rails.application.routes.draw do
     resources :borrowed_details, only: %i(create destroy)
     resources :borroweds, only: %i(show)
     resources :comments, only: %i(create destroy)
+    resources :account_activations, only: :edit
+    resources :password_resets, except: %i(index show destroy)
   end
 end

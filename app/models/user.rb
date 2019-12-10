@@ -3,7 +3,10 @@ class User < ApplicationRecord
   has_many :rates, dependent: :destroy
   has_many :borroweds, dependent: :destroy
   has_many :books, through: :comments
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token, :reset_token
+
+  before_save :downcase_email
+  before_create :create_activation_digest
 
   USER_PARAMS = %i(name email sex birth phone address identity_card
     password password_confirmation).freeze
@@ -54,5 +57,37 @@ class User < ApplicationRecord
 
   def forget
     update remember_digest: nil
+  end
+
+  def activate
+    update activated: true, activated_at: Time.zone.now
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < Settings.reset_sent_at.hours.ago
+  end
+
+  private
+
+  def downcase_email
+    email.downcase!
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
   end
 end
