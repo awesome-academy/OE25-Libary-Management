@@ -6,6 +6,7 @@ class Book < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :rates, dependent: :destroy
   has_many :borroweds, through: :borrowed_detail
+  has_many :users, through: :comments
 
   validates :name, presence: true, length: {maximum: Settings.max_name_book}
   validates :price, :amount, :rest_amount, numericality: true

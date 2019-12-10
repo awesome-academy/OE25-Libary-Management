@@ -168,7 +168,26 @@ form#search_form {
 }
 
 li.dropdown.show {
-    display: inline !important;
+  display: inline !important;
+}
+
+#comments-list a {
+  text-transform: unset;
+  color: $red;
+  font-size: medium;
+  margin-left: 0;
+}
+
+#comments-list p {
+  color: $blue-dark;
+  font-size: 15px;
+}
+
+#new_comment input[type="submit"] {
+  color: $black;
+  margin-left: 600px;
+  font-size: 16px;
+  line-height: normal;
 }
 
 .field_with_errors input{
@@ -195,4 +214,12 @@ label.required:after {
 
 .not-book {
   text-align: center;
+}
+
+input::placeholder {
+  color: $grey !important;
+}
+
+textarea::placeholder {
+  color: $grey !important;
 }

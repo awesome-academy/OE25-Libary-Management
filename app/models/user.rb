@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :rates, dependent: :destroy
   has_many :borroweds, dependent: :destroy
+  has_many :books, through: :comments
   attr_accessor :remember_token
 
   USER_PARAMS = %i(name email sex birth phone address identity_card

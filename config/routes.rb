@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     resources :books
     resources :borroweds, except: %i(create destroy new)
     resources :borrowed_details, only: %i(create destroy)
+    resources :borroweds, only: %i(show)
+    resources :comments, only: %i(create destroy)
   end
 end

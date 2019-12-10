@@ -65,3 +65,16 @@ vi:
   delete_borrowed_details_fail: "Xóa không thành công"
   not_book: "Không có cuốn sách nào trong giỏ sách"
   sure: "Bạn có chắc muốn xóa không?"
+  delete: Xóa
+  your_comment_has_been_booked: Bạn đã bình luận về sách
+  comment_deleted: Đã xóa comment
+  please_log_in: Vui lòng đăng nhập
+  comment: Bình luận
+  comments: 
+    one: "%{count} Bình luận"
+    other: "%{count} Bình luận"
+  you_sure: Bạn có chắc chắn muốn xóa?
+  delete_false: Không xóa được
+  error:
+    one: "%{count} lỗi"
+    other: "%{count} lỗi"
