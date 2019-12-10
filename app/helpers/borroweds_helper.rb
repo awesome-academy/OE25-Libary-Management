@@ -5,11 +5,9 @@ module BorrowedsHelper
   end
 
   def borrowed_present
-    current_user.borroweds.select{|borrowed| borrowed.borrow_day.present?}
-  end
-
-  def borroweds_present_day
-    current_user.borroweds.select{|borrowed| borrowed.borrow_day.present?}
+    borroweds = current_user.borroweds
+    borroweds.borrowed_present_borrow_day.page(params[:page])
+                .per Settings.page_borrowed
   end
 
   def set_borrowed

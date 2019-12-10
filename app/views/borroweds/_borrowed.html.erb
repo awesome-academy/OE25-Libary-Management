@@ -9,4 +9,9 @@
   <td><%= borrowed.borrow_day %></td>
   <td><%= borrowed.return_day %></td>
   <td class="status"><%= borrowed.status %></td>
+  <td>
+    <%= link_to borrowed_path(borrowed), method: :delete, data: { confirm: t("sure") }, remote: true, class:"close", aria:{label:t("close")} do %>
+      <span aria-hidden="true">&times;</span>
+    <% end %>
+  </td>
 </tr>
