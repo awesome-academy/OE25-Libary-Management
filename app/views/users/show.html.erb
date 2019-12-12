@@ -1,0 +1,33 @@
+<% provide :title, @user.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1><%= @user.name %></h1>
+    </section>
+    <section >
+      <ul class="list-group list-group-flush">
+        <b><%= t "name" %>: </b>
+        <%= @user.name %>
+        <hr>
+        <b><%= t "email" %>: </b>
+        <%= @user.email %>
+        <hr>
+        <b><%= t "address" %>: </b>
+        <%= @user.address %>
+        <hr>
+        <b><%= t "phone" %>: </b>
+        <%= @user.phone %>
+        <hr>
+        <b><%= t "identity_card" %>: </b>
+        <%= @user.identity_card %>
+        <hr>
+        <b><%= t "birth" %>: </b>
+        <%= @user.birth %>
+        <hr>
+        <b><%= t "sex" %>: </b>
+        <%= @user.sex %>
+        <hr>
+      </ul>
+    </section>
+  </aside>
+</div>

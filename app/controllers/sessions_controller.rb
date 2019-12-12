@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       else
         forget @user
       end
-      redirect_to root_url
+      redirect_back_or @user
     else
       flash.now[:danger] = t "email_password"
       render :new

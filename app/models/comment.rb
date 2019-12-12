@@ -4,7 +4,8 @@ class Comment < ApplicationRecord
   belongs_to :user
 
   validates :user_id, presence: true
-  validates :content, presence: true, length: {maximum: Settings.maximum_content}
+  validates :content, presence: true, length: {maximum:
+    Settings.maximum_content}
 
   delegate :name, to: :user, prefix: :user
 

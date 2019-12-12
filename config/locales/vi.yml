@@ -39,35 +39,35 @@ vi:
   remember_me_on_this_computer: Nhớ tài khoản trên máy tính này
   contact: Liên hệ
   email_password: Email hoặc mật khẩu không đúng
-  borrow: "Mượn"
+  borrow: Mượn
   quanity: Số lượng
   borrow_book: Mượn sách
   not_found_book: Không tìm được sách
-  not_save: "Sách chưa được thêm vào giỏ"
-  save_success: "Đã thêm vào giỏ"
+  not_save: Sách chưa được thêm vào giỏ
+  save_success: Đã thêm vào giỏ
   there_are_no_book: Không có sách
   search: Tìm kiếm
   result_search: Kết quả tìm kiếm
-  borrow_day: "Ngày mượn"
-  return_day: "Ngày trả"
-  not_found_borrowed: "Không tìm thấy"
-  login_again: "Hãy đăng nhập trước"
+  borrow_day: Ngày mượn
+  return_day: Ngày trả
+  not_found_borrowed: Không tìm thấy
+  login_again: Hãy đăng nhập trước
   empty_cart: Giỏ sách (trống)
-  borrow_success: "Đã mượn sách thành công"
-  borrow_success_not: "Không thể mượn sách"
-  borrowed_day_fail: "Nhập lại ngày mượn"
-  stt: "Lần mượn"
-  borrowed_book: "Sách mượn"
-  borrowed_day: "Ngày mượn"
-  return_day: "Ngày trả"
-  Status: "Trạng thái"
-  day_not_past: "Ngày mượn không được trong quá khứ"
-  delete_borrowed_details_fail: "Xóa không thành công"
-  not_book: "Không có cuốn sách nào trong giỏ sách"
-  sure: "Bạn có chắc muốn xóa không?"
+  borrow_success: Đã mượn sách thành công
+  borrow_success_not: Không thể mượn sách
+  borrowed_day_fail: Nhập lại ngày mượn
+  stt: Lần mượn
+  borrowed_book: Sách mượn
+  borrowed_day: Ngày mượn
+  return_day: Ngày trả
+  Status: Trạng thái
+  day_not_past: Ngày mượn không được trong quá khứ
+  delete_borrowed_details_fail: Xóa không thành công
+  not_book: Không có cuốn sách nào trong giỏ sách
+  sure: Bạn có chắc muốn xóa không?
   delete: Xóa
   your_comment_has_been_booked: Bạn đã bình luận về sách
-  comment_deleted: Đã xóa comment
+  comment_deleted: Đã xóa bình luận
   please_log_in: Vui lòng đăng nhập
   comment: Bình luận
   comments:
@@ -79,3 +79,10 @@ vi:
     one: "%{count} lỗi"
     other: "%{count} lỗi"
   close: "Đóng"
+  edit_user: Cập thông tin người dùng
+  save_changes: Lưu thay đổi
+  update_your_profile: Cập nhật hồ sơ của bạn
+  change: Thay đổi
+  profile_update: Cập nhật hồ sơ
+  update_false: Cập nhật lỗi
+  please_log_in: Vui lòng đăng nhập
