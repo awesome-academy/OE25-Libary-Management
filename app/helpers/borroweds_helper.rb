@@ -7,7 +7,7 @@ module BorrowedsHelper
   def borrowed_present
     borroweds = current_user.borroweds
     borroweds.borrowed_present_borrow_day.page(params[:page])
-                .per Settings.page_borrowed
+             .per Settings.page_borrowed
   end
 
   def set_borrowed
