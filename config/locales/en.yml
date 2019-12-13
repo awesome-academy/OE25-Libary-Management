@@ -34,7 +34,6 @@ en:
   new_user: New user?
   sign_up_now: Sign up now!
   log_out: Logout
-  profile: Profile
   settings: Settings
   remember_me_on_this_computer: Remember me on this computer
   contact: Contact
@@ -110,3 +109,16 @@ en:
   forgot_password: Forgot password
   welcome: Welcome to Library Management
   account_activated: Account activated
+  login: "Log in"
+  user_manage: "Users Management"
+  book_manage: "Books Management"
+  category_manage: "Categories Management"
+  author_manage: "Authors Management"
+  publisher_manage: "Publishers Management"
+  comment_manage: "Comments Management"
+  intr_library_management: "This is a library management website, which can help
+    us manage and lend books conveniently"
+  user_name: "User"
+  profile: "My Profile"
+  logout: "Log Out"
+  borowed_book: "Borrowed Book"

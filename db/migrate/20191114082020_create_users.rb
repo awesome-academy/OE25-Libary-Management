@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :address
       t.string :phone
       t.string :identity_card
-      t.integer :role, default: 2
+      t.integer :role
 
       t.timestamps
     end

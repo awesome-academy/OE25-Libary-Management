@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield(:title) %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+    <%= render "layouts/admin_header" %>
+    <div class="container-fluid main">
+      <div class="row">
+        <div class="col-sm-2">
+          <%= render "layouts/admin_sidebar" %>
+        </div>
+        <div class="col-sm-10">
+          <div class="container">
+            <section id="main-content">
+              <section class="wrapper">
+                <div class="container">
+                  <%= yield %>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

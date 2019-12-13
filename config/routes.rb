@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
+    get "admin/dashboard", to: "admin#dashboard"
     get "/signup", to: "users#new"
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
@@ -18,5 +19,6 @@ Rails.application.routes.draw do
     resources :comments, only: %i(create destroy)
     resources :account_activations, only: :edit
     resources :password_resets, except: %i(index show destroy)
+
   end
 end
