@@ -1,0 +1,12 @@
+<tr>
+  <td><%= comment.book_name %></td>
+  <td><%= comment.user_name %></td>
+  <td class="content"><%= comment.content %></td>
+  <td>
+    <span>
+    <%= link_to admin_comment_path(comment), method: :delete, data: {confirm: t("you_sure")}, class: "book-btn" do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+    </span>
+  </td>
+</tr>

@@ -127,8 +127,9 @@ en:
   name_book: "Book name"
   publisher: "Publisher"
   price: "Price"
-  controll: "Controll"
   decription: "Decription"
   edit_book: "Edit book"
   edit_success: "Edit success"
   edit_fail: "Edit fail"
+  control: "Control"
+  index: Index

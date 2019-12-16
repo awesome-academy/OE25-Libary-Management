@@ -127,8 +127,9 @@ vi:
   name_book: "Tên sách"
   publisher: "Nhà xuất bản"
   price: "Giá"
-  controll: "Điều khiển"
   decription: "Mô tả"
   edit_book: "Chỉnh sửa"
   edit_success: "Chỉnh sửa thành công"
   edit_fail: "Chỉnh sửa không thành công"
+  control: "Điều khiển"
+  index: STT

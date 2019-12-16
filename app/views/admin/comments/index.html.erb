@@ -1,0 +1,16 @@
+<% provide :title, t("comment_manage") %>
+<h2 class = "title"><%= t "comment_manage" %></h2>
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><%= t "index" %></th>
+      <th scope="col"><%= t "name_book" %></th>
+      <th scope="col"><%= t "user_name" %></th>
+      <th scope="col"><%= t "content" %></th>
+      <th scope="col"><%= t "control" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @comments %>
+  </tbody>
+</table>

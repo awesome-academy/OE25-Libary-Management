@@ -7,7 +7,8 @@ class Comment < ApplicationRecord
   validates :content, presence: true, length: {maximum:
     Settings.maximum_content}
 
-  delegate :name, to: :user, prefix: :user
+  delegate :name, to: :user, prefix: true
+  delegate :name, to: :book, prefix: true
 
   scope :order_by_created_at, ->{order created_at: :desc}
 end
