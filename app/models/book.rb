@@ -16,6 +16,7 @@ class Book < ApplicationRecord
 
   delegate :name, to: :author, prefix: true
   delegate :name, to: :category, prefix: true
+  delegate :name, to: :publisher, prefix: true
 
   scope :search, (lambda do |parameter|
                     where("name LIKE :search",

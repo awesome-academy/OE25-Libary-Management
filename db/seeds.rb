@@ -30,7 +30,7 @@ end
   price = 200000
   amount = 200
   rest_amount = 20
-  decription = Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4)
+  decription = Faker::Lorem.paragraph(sentence_count: 10, supplemental: false, random_sentences_to_add: 4)
   book = Book.create!(name: name, author_id: author_id, category_id: category_id, publisher_id: publisher_id,price: price,amount: amount, rest_amount: rest_amount,decription: decription )
   book.image.attach io: File.open(Rails.root
     .join("app", "assets", "images", "default_cover.jpg")),

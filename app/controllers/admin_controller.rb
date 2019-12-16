@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  include SessionsHelper
+
   layout "admin_application"
 
   def dashboard
