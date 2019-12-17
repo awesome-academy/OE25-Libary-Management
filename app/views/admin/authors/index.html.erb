@@ -1,11 +1,17 @@
 <% provide :title, t("author_manage") %>
 <h2 class = "title"><%= t "author_manage" %></h2>
+<span>
+  <%= link_to new_admin_author_path, class: "btn btn-success" do %>
+  <%= t "create_author" %>
+    <i class="fa fa-plus"></i>
+  <% end %>
+</span>
 <table class="table table-bordered table-hover">
   <thead class="thead-dark">
     <tr>
       <th scope="col"><%= t "index" %></th>
       <th scope="col"><%= t "name_author" %></th>
-      <th scope="col"><%= t "decription" %></th>
+      <th scope="col"><%= t "description" %></th>
       <th scope="col"><%= t "control" %></th>
     </tr>
   </thead>
@@ -13,3 +19,4 @@
     <%= render @authors %>
   </tbody>
 </table>
+<%= paginate @authors %>

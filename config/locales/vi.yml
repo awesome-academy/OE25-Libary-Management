@@ -127,7 +127,7 @@ vi:
   name_book: "Tên sách"
   publisher: "Nhà xuất bản"
   price: "Giá"
-  decription: "Mô tả"
+  description: "Mô tả"
   edit_book: "Chỉnh sửa"
   edit_success: "Chỉnh sửa thành công"
   edit_fail: "Chỉnh sửa không thành công"
@@ -136,7 +136,15 @@ vi:
   author_deleted: Đã xóa tác giả
   delete_book_fail: "Xóa không thành công"
   delete_book_success: "Xóa sách thành công"
+  not_admin: Bạn không phải là admin
   book_in_borrowed: "Sách đã được mượn. Không thể xóa"
   edit_success: Sửa thành công
   edit_fail: Sửa thất bại
   edit_author: Cập nhật thông tin tác giả
+  author_deleted: Đã xóa tác giả
+  edit_success: Sửa thành công
+  edit_fail: Sửa thất bại
+  edit_author: Cập nhật thông tin tác giả
+  create_author: Thêm tác giả
+  author_update: Cập nhật tác giả
+  create_success: Tạo mới thành công
