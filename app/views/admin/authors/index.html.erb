@@ -1,0 +1,15 @@
+<% provide :title, t("author_manage") %>
+<h2 class = "title"><%= t "author_manage" %></h2>
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><%= t "index" %></th>
+      <th scope="col"><%= t "name_author" %></th>
+      <th scope="col"><%= t "decription" %></th>
+      <th scope="col"><%= t "control" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @authors %>
+  </tbody>
+</table>

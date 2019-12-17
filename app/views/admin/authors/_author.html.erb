@@ -1,0 +1,11 @@
+<tr>
+  <td><%= author.name %></td>
+  <td><%= author.decription %></td>
+  <td>
+    <span>
+    <%= link_to admin_author_path(author), class: "book-btn" do %>
+      <i class="fa fa-eye"></i>
+    <% end %>
+    </span>
+  </td>
+</tr>
