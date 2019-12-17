@@ -586,7 +586,7 @@ a.book-btn {
   margin-right: 5px;
   padding: 5px 5px 5px 8px;
   &:hover {
-    background-color: #4a4a4a;
+    background-color: $very_dark_gray;
     color: $white;
   }
   i {
@@ -610,4 +610,11 @@ i.fa.fa-trash {
 
 input.btn.btn-primary.edit {
   margin-top: 2rem;
+}
+
+td.content {
+    width: 500px;
+    height: 100px;
+    padding: 50px;
+    box-sizing: border-box;
 }

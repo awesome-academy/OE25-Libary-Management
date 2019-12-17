@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
     if @user.admin?
       redirect_to(admin_dashboard_path)
     else
-      redirect_back_or @user
+      redirect_back_or root_url
     end
   end
 end
