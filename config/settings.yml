@@ -4,7 +4,7 @@ price: "$75.000"
 max_name_publisher: 100
 max_address_publisher: 100
 max_name_author: 50
-max_decription_author: 200
+max_description_author: 200
 max_name_category: 100
 max_name_book: 200
 max_decription_book: 500
