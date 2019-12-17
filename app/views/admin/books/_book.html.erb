@@ -7,9 +7,19 @@
   <td><%= book.rest_amount %></td>
   <td>
     <span>
-    <%= link_to admin_book_path(book), class: "book-btn" do %>
-      <%= t "show" %>
-    <% end %>
+      <%= link_to admin_book_path(book), class: "book-btn" do %>
+        <i class="fa fa-eye"></i>
+      <% end %>
+    </span>
+    <span>
+      <%= link_to edit_admin_book_path(book), class: "book-btn" do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+    </span>
+    <span>
+      <%= link_to admin_book_path(book), class: "book-btn" do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
     </span>
   </td>
 </tr>

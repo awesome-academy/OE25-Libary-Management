@@ -1,4 +1,7 @@
 class Book < ApplicationRecord
+  BOOK_PARAMS = %i(name author_id category_id publisher_id price rest_amount
+    decription).freeze
+
   belongs_to :author
   belongs_to :category
   belongs_to :publisher
