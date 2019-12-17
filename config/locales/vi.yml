@@ -148,3 +148,8 @@ vi:
   create_author: Thêm tác giả
   author_update: Cập nhật tác giả
   create_success: Tạo mới thành công
+  author_deleted: Đã xóa tác giả
+  edit_success: Sửa thành công
+  edit_fail: Sửa thất bại
+  edit_author: Cập nhật thông tin tác giả
+  create_author: Thêm tác giả

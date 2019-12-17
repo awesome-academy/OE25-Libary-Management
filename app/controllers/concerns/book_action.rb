@@ -9,7 +9,7 @@ module BookAction
     @books = if params[:search].blank?
                Book.includes(:author, :category, :publisher)
              else
-               Book.includes(:authors, :categories, :publishers)
+               Book.includes(:author, :category, :publisher)
                    .search(params[:search].downcase)
              end
     @books = @books.page(params[:page]).per Settings.page_book
