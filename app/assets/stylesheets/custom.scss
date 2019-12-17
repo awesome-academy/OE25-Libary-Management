@@ -613,8 +613,11 @@ input.btn.btn-primary.edit {
 }
 
 td.content {
-    width: 500px;
-    height: 100px;
-    padding: 50px;
-    box-sizing: border-box;
+  width: 500px;
+  height: 100px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+ul.list-group.list-group-flush {
+  margin-left: 40px;
 }
