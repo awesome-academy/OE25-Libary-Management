@@ -3,9 +3,14 @@
   <td><%= author.decription %></td>
   <td>
     <span>
-    <%= link_to admin_author_path(author), class: "book-btn" do %>
+      <%= link_to admin_author_path(author), class: "book-btn" do %>
       <i class="fa fa-eye"></i>
     <% end %>
+    </span>
+    <span>
+      <%= link_to admin_author_path(author), method: :delete, data: {confirm: t("you_sure")},class: "book-btn" do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
     </span>
   </td>
 </tr>
