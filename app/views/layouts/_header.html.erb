@@ -62,11 +62,11 @@
     <div class="menu_sec">
       <ul class="megamenu skyblue">
         <li class="active grid"><%= link_to t("home"), root_url, class: "color1" %></li>
-        <li class="grid"><%= link_to t("economic_book"), "#", class: "color1" %></li>
-        <li><%= link_to t("foregin_literature"), "#", class: "color1" %></li>
-        <li><%= link_to t("domestic_literature"), "#", class: "color1" %></li>
-        <li><%= link_to t("novel"), "#", class: "color1" %></li>
-        <li><%= link_to t("new_book"), "#", class: "color1" %></li>
+        <% Category.all.each do |category| %>
+          <% if category.parent_id == nil %>
+            <li><%= link_to category.name , category_path(category), class: "color1" %></li>
+          <% end %>
+        <% end %>
       </ul>
       <%= form_tag books_path, method: :get, id: :search_form do %>
         <%= text_field_tag :search, params[:search], placeholder: t("search") %>

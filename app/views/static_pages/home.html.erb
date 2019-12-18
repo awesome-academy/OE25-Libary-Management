@@ -1,17 +1,21 @@
 <% provide :title, t("home") %>
 <div class="block" id="module_topcategories">
-  <div class="container category">
-    <%= link_to t("new_book"), "#", class: "title-cate", title: "New books" %>
-    <%= link_to t("view_all"), "#", class: "more", title: "View all" %>
-  </div>
-  <div class="blockcontent">
-    <div class="banner-bottom">
-      <div class="container">
-          <div class="product-one">
-            <%= render @books %>
-          </div>
-        <%= paginate @books %>
+  <% Category.all.each do |category| %>
+    <% if category.parent_id == nil %>
+      <div class="container category">
+      <%= link_to category.name, category_path(category), class: "title-cate" %>
+      <%= link_to t("view_all"), category_path(category), class: "more", title: "View all" %>
       </div>
-    </div>
-  </div>
+      <div class="blockcontent">
+        <div class="banner-bottom">
+          <div class="container">
+              <div class="product-one">
+                <%= render category.books.limit(4) %>
+              </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>
+

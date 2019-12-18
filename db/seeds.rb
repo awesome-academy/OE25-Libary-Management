@@ -4,7 +4,7 @@
   Author.create!(name: name, decription: decription)
 end
 
-6.times do |n|
+4.times do |n|
   name = Faker::Name.name
   parent_id =  nil
   Category.create!(name: name, parent_id: parent_id)

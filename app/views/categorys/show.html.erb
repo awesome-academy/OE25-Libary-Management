@@ -1,0 +1,12 @@
+<% provide :title, @category.name %>
+<h2><%= @category.name %></h2>
+<br>
+<div class="blockcontent">
+  <div class="banner-bottom">
+    <div class="container">
+        <div class="product-one">
+          <%= render @category.books %>
+        </div>
+    </div>
+  </div>
+</div>
