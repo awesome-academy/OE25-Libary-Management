@@ -1,8 +1,6 @@
 class Admin::BooksController < AdminController
   include BookAction
 
-  before_action :find_book, only: %i(show edit update)
-
   def show; end
 
   def edit; end
@@ -14,6 +12,17 @@ class Admin::BooksController < AdminController
     else
       flash.now[:danger] = t "edit_fail"
       render :edit
+    end
+  end
+
+  def destroy
+    begin
+      @book.destroy!
+      flash[:success] = t "delete_book_success"
+    rescue
+      flash[:danger] = t "delete_book_fail"
+    ensure
+      redirect_to admin_books_url
     end
   end
 

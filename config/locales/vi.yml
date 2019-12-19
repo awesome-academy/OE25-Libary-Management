@@ -134,3 +134,6 @@ vi:
   control: "Điều khiển"
   index: STT
   author_deleted: Đã xóa tác giả
+  delete_book_fail: "Xóa không thành công"
+  delete_book_success: "Xóa sách thành công"
+  book_in_borrowed: "Sách đã được mượn. Không thể xóa"

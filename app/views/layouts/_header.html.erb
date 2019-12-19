@@ -13,10 +13,32 @@
               <%= current_user.name %>
             <% end %>
             <ul class="dropdown-menu">
-              <li><%= link_to t("profile"), current_user %></li>
-              <li><%= link_to t("settings"), edit_user_path(current_user) %></li>
-              <li><%= link_to t("borrowed_book"), borroweds_path %></li>
-              <li class="divider"></li>
+              <li>
+                <%= link_to current_user do %>
+                  <i class="fa fa-user"></i>
+                  <%= t("profile") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to edit_user_path(current_user) do %>
+                  <i class="fa fa-cog"></i>
+                  <%= t("settings") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to borroweds_path do %>
+                  <i class="fa fa-opencart"></i>
+                  <%= t "borrowed_book" %>
+                <% end %>
+              </li>
+              <% if current_user.admin? %>
+                <li>
+                  <%= link_to admin_dashboard_path do %>
+                    <i class="fa fa-book"></i>
+                    <%= t "library_management" %>
+                  <% end %>
+                </li>
+              <% end %>
               <li><%= link_to t("log_out"), logout_path, method: :delete %></li>
             </ul>
             </li>

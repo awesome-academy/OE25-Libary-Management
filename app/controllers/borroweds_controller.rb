@@ -29,7 +29,7 @@ class BorrowedsController < ApplicationController
       respond_to :js
     else
       respond_to do |format|
-        format.js{render "alert(#{t('delete_borrowed_details_fail')});"}
+        format.js{render "alert(#{t('delete_book_fail')});"}
       end
     end
   end

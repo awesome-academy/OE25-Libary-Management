@@ -84,6 +84,12 @@ ul.dropdown-menu {
   line-height: 1.428571429;
   background-color: $black;
   white-space: nowrap;
+  li a {
+    margin-left: 0;
+    display: block;
+    width: 10rem;
+    line-height: 2rem;
+  }
 }
 
 form#search-form {
@@ -435,7 +441,7 @@ ul.sidebar-menu li.active a i {
       margin-top: -38px;
       .dropdown-menu.logout {
         width: 200px !important;
-        height: 150px;
+        height: 185px;
       }
       a {
         padding: 8px;
@@ -618,10 +624,35 @@ td.content {
   padding: 50px;
   box-sizing: border-box;
 }
+
 ul.list-group.list-group-flush {
   margin-left: 40px;
 }
 
 ul.list-group.list-group-flush {
   margin-left: 40px;
+}
+
+.cart-item img {
+  width: 150px;
+  height: 200px;
+}
+
+.col-md-9.cart-items {
+  margin-top: 6rem;
+  h1 {
+    font-size: 33px;
+    margin-left: 0;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+}
+
+.alert {
+  width: 20rem;
+  margin-bottom: -39px;
 }
