@@ -139,3 +139,6 @@ en:
   delete_book_success: "Delete success"
   not_admin: "You are not admin"
   book_in_borrowed: "Book is borrowed. Don't delelte"
+  edit_success: Edit success
+  edit_fail: Edit fail
+  edit_author: Edit author

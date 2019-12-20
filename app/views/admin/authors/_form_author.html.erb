@@ -1,0 +1,11 @@
+<%= form_for [:admin, @author] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label t "name", class: "col-sm-3" %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label t "decription" %>
+  <%= f.text_area :decription, class: "form-control" %>
+
+  <%= f.submit t("edit_author"), class: "btn btn-primary edit" %>
+<% end %>

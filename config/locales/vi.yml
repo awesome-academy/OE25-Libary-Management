@@ -137,3 +137,6 @@ vi:
   delete_book_fail: "Xóa không thành công"
   delete_book_success: "Xóa sách thành công"
   book_in_borrowed: "Sách đã được mượn. Không thể xóa"
+  edit_success: Sửa thành công
+  edit_fail: Sửa thất bại
+  edit_author: Cập nhật thông tin tác giả

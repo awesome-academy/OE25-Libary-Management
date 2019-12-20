@@ -8,6 +8,11 @@
     <% end %>
     </span>
     <span>
+      <%= link_to edit_admin_author_path(author), class: "book-btn" do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+    </span>
+    <span>
       <%= link_to admin_author_path(author), method: :delete, data: {confirm: t("you_sure")},class: "book-btn" do %>
         <i class="fa fa-trash"></i>
       <% end %>
