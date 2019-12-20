@@ -1,0 +1,42 @@
+<% provide :title, t("publisher_manage") %>
+<h2 class = "title"><%= t "publisher_manage" %></h2>
+<div class="search-publisher">
+  <%= form_tag admin_publishers_path, method: :get, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do %>
+    <%= text_field_tag :search, params[:search], placeholder: t("search"), class: "form-control mr-sm-2" %>
+    <%= submit_tag t("search"), class: "btn btn-outline-success my-2 my-sm-0" %>
+  <% end %>
+</div>
+<div class="excel-publisher">
+  <%= link_to admin_publishers_path(format: "xls"), class: "btn btn-success" do %>
+    <%= t "excel" %>
+  <% end %>
+</div>
+<div class="create-publisher">
+  <%= link_to new_admin_publisher_path, class: "btn btn-success" do %>
+    <i class="fa fa-plus"></i>
+    <%= t "create_publisher" %>
+  <% end %>
+</div>
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col"><%= t "index" %></th>
+          <th scope="col"><%= t "name_publisher" %></th>
+          <th scope="col"><%= t "address" %></th>
+          <th scope="col"><%= t "control" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @publishers %>
+      </tbody>
+    </table>
+  </Worksheet>
+</Workbook>
+<%= paginate @publishers %>

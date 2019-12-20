@@ -61,7 +61,8 @@ class Admin::AuthorsController < AdminController
   end
 
   def load_author
-    return if @author = Author.find_by(id: params[:id])
+    @author = Author.find_by(id: params[:id])
+    return if @author
 
     flash[:danger] = t "not_found"
     redirect_to root_url

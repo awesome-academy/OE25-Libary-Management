@@ -1,0 +1,21 @@
+<tr>
+  <td><%= publisher.name %></td>
+  <td><%= publisher.address %></td>
+  <td>
+    <span>
+      <%= link_to admin_publisher_path(publisher), class: "book-btn" do %>
+      <i class="fa fa-eye"></i>
+    <% end %>
+    </span>
+    <span>
+      <%= link_to edit_admin_publisher_path(publisher), class: "book-btn" do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+    </span>
+    <span>
+      <%= link_to admin_publisher_path(publisher), method: :delete, data: {confirm: t("you_sure")},class: "book-btn" do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
+    </span>
+  </td>
+</tr>
