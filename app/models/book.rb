@@ -5,10 +5,11 @@ class Book < ApplicationRecord
   belongs_to :author
   belongs_to :category
   belongs_to :publisher
-  has_many :borrowed_details
+  has_many :borrowed_details, dependent: :restrict_with_error
   has_many :comments, dependent: :destroy
   has_many :rates, dependent: :destroy
-  has_many :borroweds, through: :borrowed_details, dependent: :restrict_with_error
+  has_many :borroweds, through: :borrowed_details,
+    dependent: :restrict_with_error
   has_many :users, through: :comments
 
   validates :name, presence: true, length: {maximum: Settings.max_name_book}

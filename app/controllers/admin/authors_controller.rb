@@ -1,7 +1,11 @@
 class Admin::AuthorsController < AdminController
-  before_action :load_author, except: %i(index)
+  before_action :load_author, except: %i(index create new)
 
   def show; end
+
+  def new
+    @author = Author.new
+  end
 
   def edit; end
 
@@ -32,6 +36,17 @@ class Admin::AuthorsController < AdminController
     else
       flash[:danger] = t "update_false"
       render :edit
+    end
+  end
+
+  def create
+    @author = Author.new author_params
+    if @author.save
+      flash[:success] = t "create_success"
+      redirect_to admin_authors_path
+    else
+      flash[:danger] = t "create_false"
+      render :new
     end
   end
 
