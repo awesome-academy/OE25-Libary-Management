@@ -1,5 +1,6 @@
 class Admin::AuthorsController < AdminController
-  before_action :load_author, except: %i(index create new)
+  before_action :load_author, except: %i(index new create)
+  before_action :search_author, only: :index
 
   def show; end
 
@@ -10,7 +11,21 @@ class Admin::AuthorsController < AdminController
   def edit; end
 
   def index
-    @authors = Author.page(params[:page]).per Settings.page_book
+    respond_to do |format|
+      format.html
+      format.xls{send_data Author.to_csv(col_sep: "\t")}
+    end
+  end
+
+  def create
+    @author = Author.new author_params
+    if @author.save
+      flash[:success] = t "success"
+      redirect_to admin_authors_path
+    else
+      flash[:danger] = t "create_false"
+      render :new
+    end
   end
 
   def destroy
@@ -39,17 +54,6 @@ class Admin::AuthorsController < AdminController
     end
   end
 
-  def create
-    @author = Author.new author_params
-    if @author.save
-      flash[:success] = t "create_success"
-      redirect_to admin_authors_path
-    else
-      flash[:danger] = t "create_false"
-      render :new
-    end
-  end
-
   private
 
   def author_params
@@ -61,5 +65,10 @@ class Admin::AuthorsController < AdminController
 
     flash[:danger] = t "not_found"
     redirect_to root_url
+  end
+
+  def search_author
+    @authors = params[:search] ? Author.search(params[:search].downcase) : Author
+    @authors = @authors.page(params[:page]).per Settings.page_book
   end
 end

@@ -1,7 +1,7 @@
 49.times do |n|
   name = Faker::Name.name
-  decription =  Faker::Lorem.sentence(word_count: 5)
-  Author.create!(name: name, decription: decription)
+  description =  Faker::Lorem.sentence(word_count: 5)
+  Author.create!(name: name, description: description)
 end
 
 6.times do |n|
