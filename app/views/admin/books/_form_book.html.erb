@@ -1,17 +1,32 @@
 <%= form_for [:admin, @book] do |f| %>
   <%= render "shared/error_messages", object: f.object %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <%= image_tag "default_cover.jpg", id: "img_prev" %>
+        <%= f.file_field :image, class: "upload-img" %>
+      </div>
+      <div class="col-md-8 ">
+        <%= f.label t "name", class: "col-sm-3" %>
+        <%= f.text_field :name, class: "form-control" %>
 
-  <%= f.label t "name", class: "col-sm-3" %>
-  <%= f.text_field :name, class: "form-control" %>
+        <%= f.label t "price" %>
+        <%= f.number_field :price, class: "form-control" %>
 
-  <%= f.label t "price" %>
-  <%= f.number_field :price, class: "form-control" %>
+        <%= f.label t "category" %>
+        <%= f.select :category_id, load_category, prompt: t("select_category") %>
 
-  <%= f.label t "rest_amount" %>
-  <%= f.number_field :rest_amount, class: "form-control" %>
+        <%= f.label t "author" %>
+        <%= f.select :author_id, load_author, prompt: t("select_author") %>
 
-  <%= f.label t "decription" %>
-  <%= f.text_area :decription, class: "form-control" %>
+        <%= f.label t "rest_amount" %>
+        <%= f.number_field :rest_amount, class: "form-control" %>
 
-  <%= f.submit t("edit_book"), class: "btn btn-primary edit" %>
+        <%= f.label t "decription" %>
+        <%= f.text_area :decription, class: "form-control" %>
+
+        <%= f.submit t("edit_book"), class: "btn btn-primary edit" %>
+      </div>
+    </div>
+  </div>
 <% end %>

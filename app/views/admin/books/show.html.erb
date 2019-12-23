@@ -8,7 +8,9 @@
     </div>
     <div class="details-left-info">
       <h3><%= @book.name %></h3>
-      <h4 class = "author_book"><%= @book.author_name %></h4>
+      <%= t "author" %>: <h4 class = "detail_book"><%= @book.author_name %></h4>
+      <br>
+      <%= t "category" %>: <h4 class = "detail_book"><%= @book.category_name %></h4>
       <div class="simpleCart_shelfItem">
         <p><span class="item_price qwe"><%= @book.price %> đ</span>
       </div>

@@ -4,7 +4,7 @@
 
 #module_topcategories .category {
   background: $white-light;
-  font-family: "Times New Roman",Times,serif;
+  font-family: "times new roman",times,serif;
   padding: 0;
   height: 38px;
   margin-bottom: 18px;
@@ -59,7 +59,7 @@ h4.author_book {
   color: black !important;
 }
 
-.details-left-info .simpleCart_shelfItem {
+.details-left-info .simplecart_shelfitem {
   margin-bottom: 5rem;
 }
 
@@ -473,7 +473,7 @@ ul.sidebar-menu li.active a i {
         display: inline-block;
         &:hover {
           background-color: $light_gray_blue !important;
-          color: #2E2E2E;
+          color: #2e2e2e;
           border-bottom: 1px solid $dark_grayish_cyan !important;
         }
       }
@@ -499,7 +499,7 @@ ul.sidebar-menu li.active a i {
     display: inline-block;
     &:hover {
       background-color: $light_gray_blue !important;
-      color: #2E2E2E;
+      color: #2e2e2e;
       border-bottom: 1px solid $dark_grayish_cyan !important;
       i {
         color: $dark_grayish_cyan;
@@ -601,8 +601,8 @@ a.book-btn {
 }
 
 .flexslider.details-lft-inf.image-admin img {
-  width: 13rem;
-  height: 16rem;
+  width: 290px;
+  height: 360px;
 }
 
 i.fa.fa-trash {
@@ -662,7 +662,7 @@ ul.list-group.list-group-flush {
 }
 
 h2.edit_author {
-  margin-left: 380px;
+  margin-left: 380px;=
 }
 
 ul.list-group.list-group-flush {
@@ -707,9 +707,34 @@ h2.edit_author {
 }
 
 ul.nav.pull-right.top-menu {
-    margin-left: 241px;
+  margin-left: 241px;
 }
 
 input.btn.btn-outline-success.my-2.my-sm-0 {
-    width: 72px;
+  width: 72px;
+}
+
+a.btn.btn-success.create-book {
+  float: right;
+  margin-bottom: 2rem;
+}
+
+input#book_image {
+  margin-top: 2rem;
+}
+
+img#img_prev {
+  width: 290px;
+  height: 360px;
+}
+
+select#book_category_id, select#book_author_id {
+  width: 277px;
+  height: 2rem;
+  margin-top: 1rem;
+  background-color: $gray;
+}
+
+h4.detail_book {
+  display: inline;
 }
