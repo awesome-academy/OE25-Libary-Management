@@ -167,3 +167,5 @@ en:
   errors_length_description: Errors length description
   user_updated: Profile update
   fail_sign_up: Create false
+  create_author_success: "Create author success"
+  create_author_fail: "Create author fail"

@@ -36,4 +36,6 @@ RSpec.describe Book, type: :model do
       it {expect(Book.search("h")).to eq [book1]}
     end
   end
+
+
 end

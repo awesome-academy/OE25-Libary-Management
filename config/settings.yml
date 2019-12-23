@@ -40,3 +40,6 @@ id_user2: 22
 role_user: 2
 enum_user: 2
 enum_admin: 1
+faker_mail: hoahuongad@gmail.com
+name_long: 51
+decription_long: 201

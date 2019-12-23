@@ -133,7 +133,7 @@ RSpec.describe Admin::BooksController, type: :controller do
       end
 
       it "generate the same route" do
-        should route(:get, "admin/books").to(action: :index)
+        should route(:get, 'admin/books').to(action: :index)
       end
     end
 
@@ -334,6 +334,48 @@ RSpec.describe Admin::BooksController, type: :controller do
         it "generate the same route" do
           should route(:delete, "admin/books/#{book.id}").to(action: :destroy, id: book.id)
         end
+      end
+    end
+
+    context "PATCH #update" do
+      before do
+        log_in @user
+        patch :update, params: {id: 1, book: {name: "Name Book"}}
+      end
+
+      it "should found" do
+        expect(response).to have_http_status(302)
+      end
+
+      it "redirect to book index" do
+        expect(response).to redirect_to admin_book_path(book)
+      end
+
+      it { should use_before_action(:find_book) }
+
+      it { should_not use_before_action(:prevent_ssl) }
+
+      it "generate the same route" do
+        should route(:patch, 'admin/books/1').to(action: :update, id: 1)
+      end
+    end
+
+    context "DELETE #destroy" do
+      before do
+        log_in @user
+        delete :destroy, params: {id: 1}
+      end
+
+      it "should found" do
+        expect(response).to have_http_status(302)
+      end
+
+      it "redirect to book index" do
+        expect(response).to redirect_to(admin_books_path)
+      end
+
+      it "generate the same route" do
+        should route(:delete, 'admin/books/1').to(action: :destroy, id: 1)
       end
     end
   end
