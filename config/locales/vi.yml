@@ -160,3 +160,6 @@ vi:
   create_book: "Tạo sách mới"
   select_category: "Chọn thể loại"
   select_author: "Chọn tên tác giả"
+  error_blank: Không thể để trắng
+  error_too_long_length: Độ dài quá dài
+  error_numericality: Phải có định dạng là số

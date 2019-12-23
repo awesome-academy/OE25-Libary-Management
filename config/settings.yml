@@ -29,3 +29,9 @@ maximum_content: 140
 page_borrowed: 10
 reset_sent_at: 2
 limit_size_image: [240, 300]
+word_amount: 5
+sentence_count: 10
+random_sentences_to_add: 4
+price: 200000
+amount: 20
+rest_amount: 15
