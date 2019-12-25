@@ -68,7 +68,10 @@ class Admin::AuthorsController < AdminController
   end
 
   def search_author
-    @authors = params[:search] ? Author.search(params[:search].downcase) : Author
-    @authors = @authors.page(params[:page]).per Settings.page_book
+    @authors = Author.page(params[:page]).per Settings.page_book
+    return if params[:search].blank?
+
+    @authors = Author.search(params[:search].downcase)
+                     .page(params[:page]).per Settings.page_book
   end
 end
