@@ -165,3 +165,5 @@ en:
   error_not_numericality: is not a number
   errors_length_name: Errors length name
   errors_length_description: Errors length description
+  user_updated: Profile update
+  fail_sign_up: Create false

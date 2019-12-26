@@ -1,14 +1,12 @@
 class UsersController < ApplicationController
   before_action :load_user, :logged_in_user, only: %i(show edit update)
-  before_action :correct_user, only: %i(edit update)
+  before_action :correct_user, only: %i(show edit update)
 
   def show; end
 
   def new
     @user = User.new
   end
-
-  def edit; end
 
   def create
     @user = User.new user_params
@@ -21,6 +19,8 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+  def edit; end
 
   def update
     if @user.update user_params
