@@ -160,3 +160,6 @@ en:
   create_book: "Create New Book"
   select_category: "Select Category"
   select_author: "Select Author"
+  error_blank: can't be blank
+  error_too_long_length: length is too long
+  error_not_numericality: is not a number
