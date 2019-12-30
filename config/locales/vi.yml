@@ -163,3 +163,5 @@ vi:
   error_blank: Không thể để trắng
   error_too_long_length: Độ dài quá dài
   error_numericality: Phải có định dạng là số
+  errors_length_name: Tên quá dài
+  errors_length_description: Mô tả quá dài

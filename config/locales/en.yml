@@ -163,3 +163,5 @@ en:
   error_blank: can't be blank
   error_too_long_length: length is too long
   error_not_numericality: is not a number
+  errors_length_name: Errors length name
+  errors_length_description: Errors length description

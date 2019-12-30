@@ -41,9 +41,12 @@ end
 group :test do
   gem "rspec-rails", "~> 3.7"
   gem "capybara", ">= 2.15"
+  gem "database_cleaner", "~> 1.5"
+  gem "factory_bot_rails"
+  gem "rspec-rails", "~> 3.7"
   gem "selenium-webdriver"
+  gem "shoulda-matchers", "~> 3.0", require: false
   gem "webdrivers"
-  gem "shoulda-matchers"
   gem "database_cleaner", "~> 1.5"
   gem "factory_bot_rails"
   gem "capybara", ">= 2.15"
