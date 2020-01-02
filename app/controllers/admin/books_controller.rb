@@ -1,6 +1,8 @@
 class Admin::BooksController < AdminController
   include BookAction
 
+  before_action :find_book, only: %i(show edit update destroy)
+
   def new
     @book = Book.new
   end

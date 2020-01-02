@@ -35,3 +35,6 @@ random_sentences_to_add: 4
 price: 200000
 amount: 20
 rest_amount: 15
+id_user1: 1
+id_user2: 22
+role_user: 2
