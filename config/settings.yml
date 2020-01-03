@@ -7,7 +7,7 @@ max_name_author: 50
 max_description_author: 200
 max_name_category: 100
 max_name_book: 200
-max_decription_book: 500
+max_decription_book: 5000
 page_book: 12
 valid_email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
 maximum_name: 50
@@ -38,3 +38,5 @@ rest_amount: 15
 id_user1: 1
 id_user2: 22
 role_user: 2
+enum_user: 2
+enum_admin: 1
