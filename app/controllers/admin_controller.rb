@@ -11,7 +11,7 @@ class AdminController < ApplicationController
   end
 
   def check_admin
-    return if current_user.admin?
+    return if current_user&.admin?
 
     flash[:danger] = t "not_admin"
     redirect_to root_path

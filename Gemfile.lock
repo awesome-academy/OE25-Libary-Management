@@ -1,6 +1,9 @@
 GIT
   remote: https://github.com/rspec/rspec-core
   revision: 07aa08b97926ce3ccf0798490bd8568219dc2117
+  remote: https://github.com/rspec/rspec-core.git
+  revision: 0d27b29083a6969ed4d3b386b71c0f6d4571c04d
+  branch: master
   specs:
     rspec-core (3.10.0.pre)
       rspec-support (= 3.10.0.pre)
@@ -8,6 +11,9 @@ GIT
 GIT
   remote: https://github.com/rspec/rspec-expectations
   revision: 33e3c614f82be81f81e09f8725b6bc450f7c40d0
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: c085c5a6f0678ae7f88a489996e391e6b661d8a9
+  branch: master
   specs:
     rspec-expectations (3.10.0.pre)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -16,6 +22,9 @@ GIT
 GIT
   remote: https://github.com/rspec/rspec-mocks
   revision: b934fafd2b0699df8a18f6a590530c08a3a9508e
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 8efc835c14eb411cf5f8b160de7e0b992ce79c31
+  branch: master
   specs:
     rspec-mocks (3.10.0.pre)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -24,6 +33,9 @@ GIT
 GIT
   remote: https://github.com/rspec/rspec-rails
   revision: 8d952bba0620a27d54fae32012d5581cfcdee9aa
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 8d952bba0620a27d54fae32012d5581cfcdee9aa
+  branch: master
   specs:
     rspec-rails (4.0.0.pre)
       actionpack (>= 4.2)
@@ -37,6 +49,9 @@ GIT
 GIT
   remote: https://github.com/rspec/rspec-support
   revision: a87275efff996096d29a5bdbf5d7dd9b785107a0
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 596198a74e6942fb9de253e590aaa71e1bf3b9d4
+  branch: master
   specs:
     rspec-support (3.10.0.pre)
 
