@@ -43,11 +43,9 @@ group :test do
   gem "database_cleaner", "~> 1.5"
   gem "factory_bot_rails"
   gem "rails-controller-testing"
-  gem "rspec-core", git: "https://github.com/rspec/rspec-core"
-  gem "rspec-expectations", git: "https://github.com/rspec/rspec-expectations"
-  gem "rspec-mocks", git: "https://github.com/rspec/rspec-mocks"
-  gem "rspec-rails", git: "https://github.com/rspec/rspec-rails"
-  gem "rspec-support", git: "https://github.com/rspec/rspec-support"
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'master'
+  end
   gem "selenium-webdriver"
   gem "shoulda-matchers", "~> 3.0", require: false
   gem "webdrivers"

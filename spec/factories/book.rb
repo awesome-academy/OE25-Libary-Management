@@ -2,7 +2,6 @@ FactoryBot.define do
   factory :book do
     name {Faker::Name.name}
     price {Settings.price}
-    amount {Settings.amount}
     rest_amount {Settings.rest_amount}
     decription {Faker::Lorem.paragraph(sentence_count: Settings.sentence_count, supplemental: false, random_sentences_to_add: Settings.random_sentences_to_add)}
     after(:build) do |book|
