@@ -40,3 +40,5 @@ id_user2: 22
 role_user: 2
 enum_user: 2
 enum_admin: 1
+name_author: 30
+description_author: 100
