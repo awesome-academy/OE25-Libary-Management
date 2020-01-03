@@ -13,7 +13,7 @@ class Book < ApplicationRecord
   has_many :users, through: :comments
 
   validates :name, presence: true, length: {maximum: Settings.max_name_book}
-  validates :price, :rest_amount, numericality: true
+  validates :price, :amount, :rest_amount, numericality: true
   validates :decription, length: {maximum: Settings.max_decription_book}
 
   has_one_attached :image
