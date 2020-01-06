@@ -13,6 +13,7 @@ class BorrowedDetailsController < ApplicationController
       current_borrowed.borrowed_details.create book_id: @chosen_book.id,
         quantity: quantity
     end
+
     redirect_to borrowed_path current_borrowed
   end
 

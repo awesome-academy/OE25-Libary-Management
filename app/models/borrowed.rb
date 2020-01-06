@@ -8,11 +8,13 @@ class Borrowed < ApplicationRecord
   validates :borrow_day, :return_day, presence: true, on: :update
   validate :return_day_after_borrow_day, :day_cannot_be_in_the_past, on: :update
 
-  enum status: {pending: 0, borrowed: 1, paid: 2}
+  enum status: {pending: 0, borrowed: 1, paid: 2, cancel: 3}
 
-  delegate :name, to: :books, prefix: true
+  delegate :name, to: :user, prefix: true
+  delegate :book_name, to: :borrowed_details, prefix: true
 
   scope :borrowed_present_borrow_day, ->{where.not borrow_day: nil}
+
   private
 
   def return_day_after_borrow_day
