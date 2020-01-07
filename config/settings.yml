@@ -46,3 +46,6 @@ borrowed: "borrowed"
 paid: "paid"
 cancel: "cancel"
 pending: "pending"
+role_addmin: 1
+fake_email: "aaaa@gmail.com"
+pass: "123456"
