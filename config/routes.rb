@@ -21,8 +21,9 @@ Rails.application.routes.draw do
     namespace :admin do
       resources :books
       resources :comments, only: %i(destroy index)
-      resources :authors, only: %i(index show destroy)
       resources :borroweds, only: %i(index show update)
+      resources :authors
+      resources :publishers
     end
   end
 end

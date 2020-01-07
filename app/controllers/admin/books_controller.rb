@@ -33,12 +33,14 @@ class Admin::BooksController < AdminController
   end
 
   def destroy
-    @book.destroy!
-    flash[:success] = t "delete_book_success"
-  rescue StandardError
-    flash[:danger] = t "delete_book_fail"
-  ensure
-    redirect_to admin_books_url
+    begin
+      @book.destroy!
+      flash[:success] = t "delete_book_success"
+    rescue StandardError
+      flash[:danger] = t "delete_book_fail"
+    ensure
+      redirect_to admin_books_url
+    end
   end
 
   private

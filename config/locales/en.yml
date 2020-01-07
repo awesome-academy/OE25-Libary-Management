@@ -168,10 +168,7 @@ en:
   errors_length_description: Errors length description
   user_updated: Profile update
   fail_sign_up: Create false
-  delete_book_fail: "Delete fail"
-  delete_book_success: "Delete success"
   create_book_fail: "Create book fail"
-  create_book_success: "Create book success"
   create_book: "Create New Book"
   select_category: "Select Category"
   select_author: "Select Author"
@@ -180,3 +177,10 @@ en:
   cancel: "Cancel"
   paid: "Paid"
   total: "Total"
+  publisher_deleted: Publisher deleted
+  publisher_update: Publisher update
+  publisher_false: Publisher false
+  create_success: Create success
+  edit_publisher: Edit publisher
+  create_publisher: Create publisher
+  name_publisher: Name publisher
