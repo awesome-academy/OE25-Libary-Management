@@ -83,7 +83,7 @@ en:
   save_changes: Save changes
   update_your_profile: Update your profile
   change: Change
-  profile_update: Profile update
+  profile_update: Profile updated
   update_false: Update false
   update_success: Update success
   please_log_in: Please login
@@ -132,35 +132,20 @@ en:
   edit_book: "Edit book"
   edit_success: "Edit success"
   edit_fail: "Edit fail"
-  control: "Control"
   index: Index
   author_deleted: Author delete
   delete_book_fail: "Delete fail"
   delete_book_success: "Delete success"
   not_admin: "You are not admin"
   book_in_borrowed: "Book is borrowed. Don't delelte"
-  edit_success: Edit success
-  edit_fail: Edit fail
-  edit_author: Edit author
-  author_deleted: Author delete
-  edit_success: Edit success
-  edit_fail: Edit fail
   edit_author: Edit author
   create_author: Create author
   author_update: Author update
   create_success: Create success
-  author_deleted: Author delete
-  edit_success: Edit success
-  edit_fail: Edit fail
-  edit_author: Edit author
-  create_author: Create author
-  delete_book_fail: "Delete fail"
-  delete_book_success: "Delete success"
   create_book_fail: "Create book fail"
   create_book_success: "Create book success"
   create_book: "Create New Book"
   select_category: "Select Category"
-  select_author: "Select Author"
   error_blank: can't be blank
   error_too_long_length: length is too long
   error_not_numericality: is not a number
@@ -168,9 +153,6 @@ en:
   errors_length_description: Errors length description
   user_updated: Profile update
   fail_sign_up: Create false
-  create_book_fail: "Create book fail"
-  create_book: "Create New Book"
-  select_category: "Select Category"
   select_author: "Select Author"
   quantity: "Quantity"
   borrowed: "Borrowed"
@@ -184,3 +166,6 @@ en:
   edit_publisher: Edit publisher
   create_publisher: Create publisher
   name_publisher: Name publisher
+  edit: Edit
+  create: Create
+  delete_user_fail: "User borrowed book, Don't delete"

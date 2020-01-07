@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">x</button>
+  <h4 class="modal-title" id="myModalLabel"><%= @user.name %></h4>
+</div>
+<div class="modal-body">
+  <b><%= t "name" %>: </b><%= @user.name %>
+  <hr>
+  <b><%= t "email" %>: </b><%= @user.email %>
+  <hr>
+  <b><%= t "address" %>: </b><%= @user.address %>
+  <hr>
+  <b><%= t "phone" %>: </b><%= @user.phone %>
+  <hr>
+  <b><%= t "identity_card" %>: </b><%= @user.identity_card %>
+  <hr>
+  <b><%= t "birth" %>: </b><%= @user.birth %>
+  <hr>
+  <b><%= t "sex" %>: </b><%= @user.sex %>
+</div>

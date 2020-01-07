@@ -1,16 +1,16 @@
 class User < ApplicationRecord
+  USER_PARAMS = %i(name email sex birth phone address identity_card
+    password password_confirmation).freeze
+  VALID_EMAIL_REGEX = Settings.valid_email_regex
+
   has_many :comments, dependent: :destroy
   has_many :rates, dependent: :destroy
-  has_many :borroweds, dependent: :destroy
+  has_many :borroweds, dependent: :restrict_with_exception
   has_many :books, through: :comments
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
   before_create :create_activation_digest
-
-  USER_PARAMS = %i(name email sex birth phone address identity_card
-    password password_confirmation).freeze
-  VALID_EMAIL_REGEX = Settings.valid_email_regex
 
   validates :name, presence: true, length: {maximum: Settings.maximum_name}
   validates :email, presence: true, length: {maximum: Settings.maximum_email},
@@ -22,9 +22,12 @@ class User < ApplicationRecord
   validates :address, length: {maximum: Settings.maximum_address}
   validates :identity_card, presence: true, length: {maximum:
     Settings.maximum_identity_card}
+
   enum sex: {male: Settings.enum_active, female: Settings.enum_archived,
              other: Settings.enum_sold_out}
   enum role: {admin: Settings.enum_active, user: Settings.enum_archived}
+
+  scope :order_by_create_at, ->{order created_at: :desc}
 
   has_secure_password
 

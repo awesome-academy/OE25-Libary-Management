@@ -2,12 +2,14 @@ class Admin::BorrowedsController < AdminController
   before_action :find_borrowed, only: %i(show update)
 
   def index
-    @borroweds = Borrowed.includes(:borrowed_details, :user).page(params[:page]).per Settings.page_borrowed
+    @borroweds = Borrowed.includes(:borrowed_details, :user)
+                         .page(params[:page]).per Settings.page_borrowed
   end
 
   def show
-    @borrowed_details = @borrowed.borrowed_details
-                          .includes(book: [:image_attachment, :image_blob])
+    @borrowed_details = @borrowed
+                        .borrowed_details
+                        .includes(book: [:image_attachment, :image_blob])
   end
 
   def update

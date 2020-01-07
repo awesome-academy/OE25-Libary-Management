@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'users/new'
+    get 'users/index'
+  end
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resources :books
+      resources :users
       resources :comments, only: %i(destroy index)
       resources :borroweds, only: %i(index show update)
       resources :authors

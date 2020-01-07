@@ -136,32 +136,16 @@ vi:
   control: "Điều khiển"
   index: STT
   author_deleted: Đã xóa tác giả
-  delete_book_fail: "Xóa không thành công"
   delete_book_success: "Xóa sách thành công"
   not_admin: Bạn không phải là admin
-  book_in_borrowed: "Sách đã được mượn. Không thể xóa"
-  edit_success: Sửa thành công
-  edit_fail: Sửa thất bại
-  edit_author: Cập nhật thông tin tác giả
-  author_deleted: Đã xóa tác giả
-  edit_success: Sửa thành công
-  edit_fail: Sửa thất bại
   edit_author: Cập nhật thông tin tác giả
   create_author: Thêm tác giả
   author_update: Cập nhật tác giả
   create_success: Tạo mới thành công
-  author_deleted: Đã xóa tác giả
-  edit_success: Sửa thành công
-  edit_fail: Sửa thất bại
-  edit_author: Cập nhật thông tin tác giả
-  create_author: Thêm tác giả
-  delete_book_fail: "Xóa không thành công"
-  delete_book_success: "Xóa sách thành công"
   create_book_fail: "Tạo sách không thành công"
   create_book_success: "Tạo sách thành công"
   create_book: "Tạo sách mới"
   select_category: "Chọn thể loại"
-  select_author: "Chọn tên tác giả"
   error_blank: Không thể để trắng
   error_too_long_length: Độ dài quá dài
   error_numericality: Phải có định dạng là số
@@ -170,12 +154,11 @@ vi:
   user_updated: Đã cập nhật
   fail_sign_up: Đăng ký lỗi
   book_in_borrowed: "Sách đã được mượn. Không thể xóa"
-  select_category: "Chọn thể loại"
-  select_author: "Chọn tên tác giả"
-  book_in_borrowed: "Sách đã được mượn. Không thể xóa"
   quantity: "Số lượng"
   borrowed: "Đã mượn"
   cancel: "Hủy"
+  select_author: "Chọn tên tác giả"
+  delete_book_fail: "Xóa không thành công"
   total: "Tổng"
   publisher_deleted: Đã xóa NXB
   publisher_update: Cập nhật thông tin NXB
