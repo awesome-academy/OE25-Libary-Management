@@ -1,6 +1,5 @@
 mail: "menbt120198@gmail.com"
 mail_: "mailto:info@example.com"
-price: "$75.000"
 max_name_publisher: 100
 max_address_publisher: 100
 max_name_author: 50
@@ -51,3 +50,7 @@ fake_email: "aaaa@gmail.com"
 pass: "123456"
 page_user: 10
 xxx: "xxx-xxx-xxxx"
+page_user: 10
+sessions: "sessions"
+registrations: "registrations"
+passwords: "passwords"

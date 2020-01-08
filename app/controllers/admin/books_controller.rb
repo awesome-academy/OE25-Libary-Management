@@ -1,10 +1,20 @@
 class Admin::BooksController < AdminController
-  include BookAction
+  include BooksHelper
 
-  before_action :find_book, only: %i(show edit update destroy)
+  before_action :find_book, except: %i(new index create)
 
   def new
     @book = Book.new
+  end
+
+  def index
+    @books = if params[:search].blank?
+               Book.includes(:author, :category, :publisher)
+             else
+               Book.includes(:author, :category, :publisher)
+                   .search(params[:search].downcase)
+             end
+    @books = @books.page(params[:page]).per Settings.page_book
   end
 
   def show; end
@@ -47,5 +57,13 @@ class Admin::BooksController < AdminController
 
   def book_params
     params.require(:book).permit Book::BOOK_PARAMS
+  end
+
+  def find_book
+    @book = Book.find_by id: params[:id]
+    return if @book
+
+    flash[:danger] = t "not_found_book"
+    redirect_to root_url
   end
 end

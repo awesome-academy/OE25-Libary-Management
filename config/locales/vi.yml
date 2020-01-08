@@ -91,8 +91,9 @@ vi:
   password_reset: Đặt lại mật khẩu
   to_reset: Để thiết lập lại mật khẩu của bạn, nhấp vào liên kết dưới đây
   reset_password: Đặt lại mật khẩu
-  this_link: Liên kết này sẽ hết hạn trong hai giờ.
+  this_link: Mật khẩu của bạn sẽ không thay đổi cho đến khi bạn nhấn vào link trên
   if_you_did_not: Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên.
+  link_reset: Ai đó đã yêu cầu đường dẫn để thay đổi mật khẩu của bạn. Bạn có thể thay đổi với đường dẫn bên dưới
   click_the_link_below: Để đặt lại mật khẩu của bạn, nhấp vào liên kết dưới đây
   expire_in_two_hours: Liên kết này sẽ hết hạn trong hai giờ.
   account_activation: Kích hoạt tài khoản
@@ -167,3 +168,35 @@ vi:
   edit_publisher: Thay đổi thông tin NXB
   create_publisher: Tạo mới NXB
   name_publisher: Tên nhà xuất bản
+  delete_book_fail: "Xóa không thành công"
+  delete_book_success: "Xóa sách thành công"
+  book_in_borrowed: "Sách đã được mượn. Không thể xóa"
+  delete_book_fail: "Xóa không thành công"
+  delete_book_success: "Xóa sách thành công"
+  create_book_fail: "Tạo sách không thành công"
+  create_book_success: "Tạo sách thành công"
+  create_book: "Tạo sách mới"
+  select_category: "Chọn thể loại"
+  select_author: "Chọn tên tác giả"
+  delete_book_fail: "Xóa không thành công"
+  delete_book_success: "Xóa sách thành công"
+  book_in_borrowed: "Sách đã được mượn. Không thể xóa"
+  delete_book_fail: "Xóa không thành công"
+  delete_book_success: "Xóa sách thành công"
+  create_book_fail: "Tạo sách không thành công"
+  create_book_success: "Tạo sách thành công"
+  create_book: "Tạo sách mới"
+  select_category: "Chọn thể loại"
+  select_author: "Chọn tên tác giả"
+  quantity: "Số lượng"
+  borrowed: "Đã mượn"
+  cancel: "Hủy"
+  current_password: "Mật khẩu hiện tại"
+  confirm_new_pwd: "Xác nhận mật khẩu mới"
+  new_pwd: "Mật khẩu mới"
+  back: "Quay lại"
+  resent_mail_confirm: "Gửi xác nhận"
+  welcome: "Chào mừng"
+  confirm_mail :You can confirm your account email through the link below:
+  confirm_account: "Confirm my account"
+  characters_minimum: "Số kí tự nhỏ nhất"

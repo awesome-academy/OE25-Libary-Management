@@ -1,7 +1,4 @@
 class AdminController < ApplicationController
-  include SessionsHelper
-  include BookHelper
-
   before_action :check_admin
 
   layout "admin_application"

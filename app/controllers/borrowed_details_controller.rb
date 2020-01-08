@@ -1,6 +1,5 @@
 class BorrowedDetailsController < ApplicationController
   before_action :load_book, only: :create
-  before_action :logged_in_user
   before_action :find_borrowed_details, only: :destroy
 
   def create

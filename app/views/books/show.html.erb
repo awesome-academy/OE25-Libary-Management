@@ -22,7 +22,7 @@
       </div>
       <p class="desc"><%= @book.decription %></p>
       <div id="comment-form">
-        <%= render "comments/comment_form" if logged_in? %>
+        <%= render "comments/comment_form" if user_signed_in? %>
       </div>
       <div id="comments-count">
         <%= t "comments", count: @comments.size %>

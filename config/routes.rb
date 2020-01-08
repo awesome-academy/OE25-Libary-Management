@@ -1,26 +1,29 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    get 'users/new'
-    get 'users/index'
-  end
   scope "(:locale)", locale: /en|vi/ do
-    root "static_pages#home"
+    root to: "static_pages#home"
+
+    devise_scope :user do
+      get "/signup", to: "devise/registrations#new"
+      post "/signup", to: "devise/registrations#create"
+      get "/edit-profile", to: "devise/registrations#edit"
+      put "/edit-profile", to: "devise/registrations#update"
+      get "/login", to: "devise/sessions#new"
+      post "/login", to: "devise/sessions#create"
+      delete "/logout", to: "devise/sessions#destroy"
+    end
 
     get "admin/dashboard", to: "admin#dashboard"
-    get "/signup", to: "users#new"
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
     post "/borrowed_details", to: "borrowed_details#create"
-    delete "/logout", to: "sessions#destroy"
 
-    resources :users
+    devise_for :users
+
+    resources :users, only: :show
     resources :books
     resources :borroweds, except: %i(create new)
     resources :borrowed_details, only: %i(create destroy)
     resources :borroweds, only: %i(show)
     resources :comments, only: %i(create destroy)
     resources :account_activations, only: :edit
-    resources :password_resets, except: %i(index show destroy)
 
     namespace :admin do
       resources :books

@@ -1,4 +1,6 @@
 class Admin::PublishersController < AdminController
+  include PublishersHelper
+
   before_action :load_publisher, except: %i(index create new)
   before_action :search_publisher, only: :index
 

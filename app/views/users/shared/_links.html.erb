@@ -1,0 +1,12 @@
+<%- if controller_name != Settings.sessions %>
+  <%= link_to t("login"), login_path, class: "btn btn-primary login" %><br />
+<% end %>
+
+<% if devise_mapping.registerable? && controller_name != Settings.registrations %>
+  <%= link_to t("signup"), signup_path %><br />
+<% end %>
+
+<%- if devise_mapping.recoverable? && controller_name != Settings.passwords && controller_name != Settings.registrations %>
+  <%= link_to t("forgot_password"), new_password_path(resource_name) %><br />
+<% end %>
+
