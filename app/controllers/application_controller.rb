@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
   include BorrowedsHelper
 
-  before_action :set_locale
+  before_action :set_locale, :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :authenticate_user!
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:danger] = exception.message
+    redirect_to root_url
+  end
 
   protected
 

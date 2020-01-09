@@ -198,5 +198,6 @@ vi:
   resent_mail_confirm: "Gửi xác nhận"
   welcome: "Chào mừng"
   confirm_mail :You can confirm your account email through the link below:
-  confirm_account: "Confirm my account"
+  confirm_account: "Xác thực tài khoản"
   characters_minimum: "Số kí tự nhỏ nhất"
+  user_not_authorize: "Bạn không được cấp quyền này"

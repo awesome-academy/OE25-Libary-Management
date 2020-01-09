@@ -1,13 +1,13 @@
 class CommentsController < ApplicationController
   before_action :load_book, only: :create
   before_action :load_comment, only: :destroy
+  load_and_authorize_resource param_method: :comment_params
 
   def new
     @comment = Comment.new
   end
 
   def create
-    @comment = Comment.new comment_params
     if @comment.save
       @new_comment = @book.comments.build
       respond_to do |format|

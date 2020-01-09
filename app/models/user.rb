@@ -3,7 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   VALID_EMAIL_REGEX = Settings.valid_email_regex
-  USER_PARAMS =  %i(name email address phone identity_card birth sex password
+  USER_PARAMS = %i(name email address phone identity_card birth sex password
     password_confirmation remember_me current_password).freeze
 
   has_many :comments, dependent: :destroy

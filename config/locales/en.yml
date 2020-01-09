@@ -184,3 +184,4 @@ en:
   confirm_mail :You can confirm your account email through the link below:
   confirm_account: "Confirm my account"
   characters_minimum: characters minimum
+  user_not_authorize: "You not authorize"
