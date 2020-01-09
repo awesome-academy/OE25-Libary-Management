@@ -3,5 +3,5 @@
   <%= render @books %>
   <%= paginate @books %>
 <% else %>
-  <p><%= t "there_are_no_book" %> <%= params[:search] %>.</p>
+  <p><%= t "there_are_no_book" %> <%= params[:q] %>.</p>
 <% end %>

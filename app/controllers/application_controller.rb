@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale, :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :ransack
 
   rescue_from CanCan::AccessDenied do |exception|
     flash[:danger] = exception.message
@@ -24,5 +25,9 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
     {locale: I18n.locale}
+  end
+
+  def ransack
+    @q = Book.ransack params[:q]
   end
 end

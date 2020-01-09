@@ -1,6 +1,12 @@
 <% provide :title, t("borowed_book") %>
 <h2 class = "title"><%= t "borowed_book" %></h2>
-<h5><%= t "total" %>: <%= size_borrowed %></h5>
+<div class="search-borrowed">
+  <%= search_form_for @borrowed, url: admin_borroweds_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+    <%= f.search_field :user_name_or_status_or_borrow_day_or_return_day_cont, placeholder: t("search"), class: "form-control" %>
+    <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
+  <% end %>
+</div>
+<h5><%= t "total" %>: <%= size_item @borrowed %></h5>
 <table class="table table-bordered table-hover">
   <thead class="thead-dark">
     <tr>

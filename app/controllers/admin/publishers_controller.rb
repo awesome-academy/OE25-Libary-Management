@@ -1,8 +1,5 @@
 class Admin::PublishersController < AdminController
-  include PublishersHelper
-
   before_action :load_publisher, except: %i(index create new)
-  before_action :search_publisher, only: :index
 
   def show; end
 
@@ -11,9 +8,12 @@ class Admin::PublishersController < AdminController
   end
 
   def index
+    @publisher = Publisher.ransack params[:q]
+    @publishers = @publisher.result.order_by_create_at
+                            .page(params[:page]).per Settings.page_user
     respond_to do |format|
       format.html
-      format.xls{send_data Author.to_csv(col_sep: "\t")}
+      format.xls{send_data Publisher.to_csv(column_names: [:id, :name], col_sep: "\t")}
     end
   end
 
@@ -67,13 +67,5 @@ class Admin::PublishersController < AdminController
 
     flash[:danger] = t "not_found"
     redirect_to root_url
-  end
-
-  def search_publisher
-    @publishers = Publisher.page(params[:page]).per Settings.page_book
-    return if params[:search].blank?
-
-    @publishers = Publisher.search(params[:search].downcase)
-                           .page(params[:page]).per Settings.page_book
   end
 end

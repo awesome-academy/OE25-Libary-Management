@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  extend Excel
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
@@ -7,7 +8,6 @@ class User < ApplicationRecord
     password_confirmation remember_me current_password).freeze
 
   has_many :comments, dependent: :destroy
-  has_many :rates, dependent: :destroy
   has_many :borroweds, dependent: :restrict_with_exception
   has_many :books, through: :comments
 

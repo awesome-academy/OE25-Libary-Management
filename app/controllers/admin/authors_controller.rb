@@ -1,6 +1,5 @@
 class Admin::AuthorsController < AdminController
   before_action :load_author, except: %i(index new create)
-  before_action :search_author, only: :index
 
   def show; end
 
@@ -11,9 +10,12 @@ class Admin::AuthorsController < AdminController
   def edit; end
 
   def index
+    @author = Author.ransack params[:q]
+    @authors = @author.result.order_by_create_at
+                      .page(params[:page]).per Settings.page_user
     respond_to do |format|
       format.html
-      format.xls{send_data Author.to_csv(col_sep: "\t")}
+      format.xls{send_data Author.to_csv(column_names: [:id, :name], col_sep: "\t")}
     end
   end
 
@@ -66,13 +68,5 @@ class Admin::AuthorsController < AdminController
 
     flash[:danger] = t "not_found"
     redirect_to root_url
-  end
-
-  def search_author
-    @authors = Author.page(params[:page]).per Settings.page_book
-    return if params[:search].blank?
-
-    @authors = Author.search(params[:search].downcase)
-                     .page(params[:page]).per Settings.page_book
   end
 end

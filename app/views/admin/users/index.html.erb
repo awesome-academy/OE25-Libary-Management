@@ -1,21 +1,43 @@
 <% provide :title, t("user_manage") %>
 <h2 class = "title"><%= t "user_manage" %></h2>
-<h5>Total: <%= User.all.size %></h5>
-<table class="table table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col"><%= t "stt" %></th>
-      <th scope="col"><%= t "user_name" %></th>
-      <th scope="col"><%= t "birth" %></th>
-      <th scope="col"><%= t "email" %></th>
-      <th scope="col"><%= t "phone" %></th>
-      <th scope="col"><%= t "control" %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @users %>
-  </tbody>
-</table>
+<div class="search-user">
+  <%= search_form_for @user, url: admin_users_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+    <%= f.search_field :name_or_birth_or_email_or_phone_cont, placeholder: t("search"), class: "form-control" %>
+    <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
+  <% end %>
+</div>
+<span>
+  <div class="excel-user">
+  <%= link_to admin_users_path(format: "xls"), class: "btn btn-success" do %>
+    <%= t "excel" %>
+  <% end %>
+</div>
+</span>
+<h5><%= t "total" %>: <%= size_item @user %></h5>
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Sheet1">
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"><%= t "index" %></th>
+        <th scope="col"><%= sort_link @user, :name, t("name") %></th>
+        <th scope="col"><%= t "birth" %></th>
+        <th scope="col"><%= t "email" %></th>
+        <th scope="col"><%= t "phone" %></th>
+        <th scope="col"><%= t "control" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @users %>
+    </tbody>
+  </table>
+</Worksheet>
+</Workbook>
 <%= paginate @users %>
 <div id="modal-window" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

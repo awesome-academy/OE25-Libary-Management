@@ -17,8 +17,4 @@ module BorrowedsHelper
     @borrowed = current_user.borroweds.create
     session[:borrowed_id] = @borrowed.id
   end
-
-  def size_borrowed
-    Borrowed.all.size
-  end
 end

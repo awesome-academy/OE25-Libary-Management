@@ -997,3 +997,43 @@ select#user_sex {
   width: 34rem !important;
   height: 2rem;
 }
+
+a.sort_link {
+  color: $white;
+  text-decoration: underline;
+}
+
+.search-user {
+  height: 6px;
+  margin-left: -15px;
+}
+
+.excel-user {
+  margin-left: 1021px;
+  height: 40px;
+}
+
+.search-comment {
+  margin-top: 54px;
+  margin-left: -15px;
+}
+
+.excel-book {
+  margin-left: 850px;
+  margin-top: -45px;
+  height: 41px;
+}
+.search-borrowed {
+  margin-top: 54px;
+  margin-left: -15px;
+}
+
+.search-book {
+  height: 50px;
+  margin-left: -15px;
+}
+
+a.btn.btn-success.create-book {
+  margin-top: -42px;
+  margin-right: -108px;
+}

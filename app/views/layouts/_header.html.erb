@@ -90,9 +90,9 @@
         <li><%= link_to t("novel"), "#", class: "color1" %></li>
         <li><%= link_to t("new_book"), "#", class: "color1" %></li>
       </ul>
-      <%= form_tag books_path, method: :get, id: :search_form do %>
-        <%= text_field_tag :search, params[:search], placeholder: t("search") %>
-        <%= submit_tag t("search") %>
+      <%= search_form_for @q, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+        <%= f.search_field :name_or_author_name_cont, placeholder: t("search"), class: "form-control" %>
+        <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
       <% end %>
       <div class="clearfix"></div>
     </div>

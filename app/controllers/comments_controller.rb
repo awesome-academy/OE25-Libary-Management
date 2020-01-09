@@ -47,13 +47,6 @@ class CommentsController < ApplicationController
     params.require(:comment).permit Comment::COMMENT_PARAMS
   end
 
-  def require_logged_in
-    return if logged_in?
-
-    flash[:danger] = t "please_log_in"
-    redirect_to root_path
-  end
-
   def load_book
     @book = Book.find_by id: params[:comment][:book_id]
     return if @book

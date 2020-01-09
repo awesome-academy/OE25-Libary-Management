@@ -8,13 +8,13 @@ class Admin::BooksController < AdminController
   end
 
   def index
-    @books = if params[:search].blank?
-               Book.includes(:author, :category, :publisher)
-             else
-               Book.includes(:author, :category, :publisher)
-                   .search(params[:search].downcase)
-             end
-    @books = @books.page(params[:page]).per Settings.page_book
+    @book = Book.ransack params[:q]
+    @books = @book.result.order_by_create_at
+                  .page(params[:page]).per Settings.page_user
+    respond_to do |format|
+      format.html
+      format.xls{send_data Book.to_csv(column_names: [:id, :name], col_sep: "\t")}
+    end
   end
 
   def show; end

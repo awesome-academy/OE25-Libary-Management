@@ -1,12 +1,18 @@
 <% provide :title, t("comment_manage") %>
 <h2 class = "title"><%= t "comment_manage" %></h2>
-<h5><%= t "total" %>: <%= size_comment %></h5>
+<div class="search-comment">
+  <%= search_form_for @comment, url: admin_comments_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+    <%= f.search_field :book_name_or_user_name_cont, placeholder: t("search"), class: "form-control" %>
+    <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
+  <% end %>
+</div>
+<h5><%= t "total" %>: <%= size_item @comment %></h5>
 <table class="table table-bordered table-hover">
   <thead class="thead-dark">
     <tr>
       <th scope="col"><%= t "index" %></th>
-      <th scope="col"><%= t "name_book" %></th>
-      <th scope="col"><%= t "user_name" %></th>
+      <th scope="col"><%= sort_link @comment, :book_name, t("name_book") %></th>
+      <th scope="col"><%= sort_link @comment, :user_name, t("user_name") %></th>
       <th scope="col"><%= t "content" %></th>
       <th scope="col"><%= t "control" %></th>
     </tr>

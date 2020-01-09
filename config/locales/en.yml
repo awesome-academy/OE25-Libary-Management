@@ -20,7 +20,7 @@ en:
   name: Name
   sex: Sex
   phone: Phone
-  birth: Bird of date
+  birth: Date of birth
   password: Password
   password_confirmation: Password Confirmation
   address: Adress

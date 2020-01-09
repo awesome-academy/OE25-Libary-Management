@@ -10,5 +10,5 @@ class Comment < ApplicationRecord
   delegate :name, to: :user, prefix: true
   delegate :name, to: :book, prefix: true
 
-  scope :order_by_created_at, ->{order created_at: :desc}
+  scope :order_by_create_at, ->{order created_at: :desc}
 end

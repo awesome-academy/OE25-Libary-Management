@@ -1,25 +1,47 @@
 <% provide :title, t("book_manage") %>
 <h2 class = "title"><%= t "book_manage" %></h2>
-<%= link_to new_admin_book_path, class: "btn btn-success create-book" do %>
-  <i class="fa fa-plus"></i>
+<div class="search-book">
+  <%= search_form_for @book, url: admin_books_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+    <%= f.search_field :name_or_category_name_or_author_name_or_publisher_name_cont, placeholder: t("search"), class: "form-control" %>
+    <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
+  <% end %>
+</div>
+<div class="excel-book">
+  <%= link_to admin_books_path(format: "xls"), class: "btn btn-success" do %>
+    <%= t "excel" %>
+  <% end %>
+</div>
+<div class="create-book">
+  <%= link_to new_admin_book_path, class: "btn btn-success create-book" do %>
+    <i class="fa fa-plus"></i>
   <%= t "create_book" %>
 <% end %>
-<h5><%= t "total" %>: <%= size_book %></h5>
-<table class="table table-bordered table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col"><%= t "stt" %></th>
-      <th scope="col"><%= t "name_book" %></th>
-      <th scope="col"><%= t "category" %></th>
-      <th scope="col"><%= t "author" %></th>
-      <th scope="col"><%= t "publisher" %></th>
-      <th scope="col"><%= t "price" %></th>
-      <th scope="col"><%= t "rest_amount" %></th>
-      <th scope="col"><%= t "control" %></th>
-    </tr>
-  </thead>
-  <tbody class = "book_ajax_del">
-    <%= render @books %>
-  </tbody>
-</table>
+</div>
+<h5><%= t "total" %>: <%= size_item @book %></h5>
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Sheet1">
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"><%= t "stt" %></th>
+        <th scope="col"><%= sort_link @book, :name, t("name_book") %></th>
+        <th scope="col"><%= sort_link @book, :category_name, t("category") %></th>
+        <th scope="col"><%= sort_link @book, :author_name, t("author") %></th>
+        <th scope="col"><%= sort_link @book, :publisher_name, t("publisher") %></th>
+        <th scope="col"><%= t "price" %></th>
+        <th scope="col"><%= t "rest_amount" %></th>
+        <th scope="col"><%= t "control" %></th>
+      </tr>
+    </thead>
+    <tbody class = "book_ajax_del">
+      <%= render @books %>
+    </tbody>
+  </table>
+</Worksheet>
+</Workbook>
 <%= paginate @books %>
