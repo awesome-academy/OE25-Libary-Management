@@ -13,7 +13,10 @@ class Admin::PublishersController < AdminController
                             .page(params[:page]).per Settings.page_user
     respond_to do |format|
       format.html
-      format.xls{send_data Publisher.to_csv(column_names: [:id, :name], col_sep: "\t")}
+      format.xls do
+        send_data Publisher.to_csv(column_names: [:id, :name],
+       col_sep: "\t")
+      end
     end
   end
 

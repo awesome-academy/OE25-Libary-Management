@@ -8,5 +8,4 @@ class Publisher < ApplicationRecord
   validates :address, length: {maximum: Settings.max_address_publisher}
 
   scope :order_by_create_at, ->{order created_at: :desc}
-
 end

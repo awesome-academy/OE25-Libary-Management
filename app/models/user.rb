@@ -28,6 +28,8 @@ class User < ApplicationRecord
              other: Settings.enum_sold_out}
   enum role: {admin: Settings.enum_active, user: Settings.enum_archived}
 
+  ratyrate_rater
+
   scope :order_by_create_at, ->{order created_at: :desc}
 
   private

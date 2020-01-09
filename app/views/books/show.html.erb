@@ -9,6 +9,12 @@
     <div class="details-left-info">
       <h3><%= @book.name %></h3>
       <h4 class = "author_book"><%= @book.author_name %></h4>
+        <div class="small-2 large-4 columns">
+          <% if current_user %>
+            <%= t "quality"%>:
+            <%= rating_for @book, "quality", disable_after_rate: true, imdb_avg: true, cancel: false %>
+          <% end %>
+        </div>
       <div class="simpleCart_shelfItem">
         <p><span class="item_price qwe"><%= @book.price %> đ</span>
         <%= form_tag borrowed_details_path do %>

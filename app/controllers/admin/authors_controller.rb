@@ -1,4 +1,5 @@
 class Admin::AuthorsController < AdminController
+  include AuthorsHelper
   before_action :load_author, except: %i(index new create)
 
   def show; end
@@ -7,15 +8,16 @@ class Admin::AuthorsController < AdminController
     @author = Author.new
   end
 
-  def edit; end
-
   def index
     @author = Author.ransack params[:q]
     @authors = @author.result.order_by_create_at
                       .page(params[:page]).per Settings.page_user
     respond_to do |format|
       format.html
-      format.xls{send_data Author.to_csv(column_names: [:id, :name], col_sep: "\t")}
+      format.xls do
+        send_data Author.to_csv(column_names: [:id, :name],
+       col_sep: "\t")
+      end
     end
   end
 
@@ -29,6 +31,8 @@ class Admin::AuthorsController < AdminController
       render :new
     end
   end
+
+  def edit; end
 
   def destroy
     if @author.destroy
