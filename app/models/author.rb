@@ -8,5 +8,4 @@ class Author < ApplicationRecord
     {maximum: Settings.max_description_author}
 
   scope :order_by_create_at, ->{order created_at: :desc}
-
 end

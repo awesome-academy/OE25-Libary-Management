@@ -3,6 +3,8 @@ class Admin::BooksController < AdminController
 
   before_action :find_book, except: %i(new index create)
 
+  def show; end
+
   def new
     @book = Book.new
   end
@@ -13,13 +15,12 @@ class Admin::BooksController < AdminController
                   .page(params[:page]).per Settings.page_user
     respond_to do |format|
       format.html
-      format.xls{send_data Book.to_csv(column_names: [:id, :name], col_sep: "\t")}
+      format.xls do
+        send_data Book.to_csv(column_names: [:id, :name],
+       col_sep: "\t")
+      end
     end
   end
-
-  def show; end
-
-  def edit; end
 
   def create
     @book = Book.new book_params
@@ -31,6 +32,8 @@ class Admin::BooksController < AdminController
       render :new
     end
   end
+
+  def edit; end
 
   def update
     if @book.update book_params

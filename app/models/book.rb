@@ -22,6 +22,8 @@ class Book < ApplicationRecord
   delegate :name, to: :category, prefix: true
   delegate :name, to: :publisher, prefix: true
 
+  ratyrate_rateable "quality"
+
   scope :order_by_create_at, ->{order created_at: :desc}
 
   def display_image

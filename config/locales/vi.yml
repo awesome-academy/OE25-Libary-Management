@@ -154,11 +154,8 @@ vi:
   errors_length_description: Mô tả quá dài
   user_updated: Đã cập nhật
   fail_sign_up: Đăng ký lỗi
-  book_in_borrowed: "Sách đã được mượn. Không thể xóa"
   quantity: "Số lượng"
-  borrowed: "Đã mượn"
   cancel: "Hủy"
-  select_author: "Chọn tên tác giả"
   delete_book_fail: "Xóa không thành công"
   total: "Tổng"
   publisher_deleted: Đã xóa NXB
@@ -168,21 +165,8 @@ vi:
   edit_publisher: Thay đổi thông tin NXB
   create_publisher: Tạo mới NXB
   name_publisher: Tên nhà xuất bản
-  delete_book_fail: "Xóa không thành công"
   delete_book_success: "Xóa sách thành công"
   book_in_borrowed: "Sách đã được mượn. Không thể xóa"
-  delete_book_fail: "Xóa không thành công"
-  delete_book_success: "Xóa sách thành công"
-  create_book_fail: "Tạo sách không thành công"
-  create_book_success: "Tạo sách thành công"
-  create_book: "Tạo sách mới"
-  select_category: "Chọn thể loại"
-  select_author: "Chọn tên tác giả"
-  delete_book_fail: "Xóa không thành công"
-  delete_book_success: "Xóa sách thành công"
-  book_in_borrowed: "Sách đã được mượn. Không thể xóa"
-  delete_book_fail: "Xóa không thành công"
-  delete_book_success: "Xóa sách thành công"
   create_book_fail: "Tạo sách không thành công"
   create_book_success: "Tạo sách thành công"
   create_book: "Tạo sách mới"
@@ -197,7 +181,8 @@ vi:
   back: "Quay lại"
   resent_mail_confirm: "Gửi xác nhận"
   welcome: "Chào mừng"
-  confirm_mail :You can confirm your account email through the link below:
+  confirm_mail: Bạn có thể xác nhận email tài khoản của bạn thông qua liên kết dưới đây
   confirm_account: "Xác thực tài khoản"
   characters_minimum: "Số kí tự nhỏ nhất"
   user_not_authorize: "Bạn không được cấp quyền này"
+  quality: "Chất lượng"

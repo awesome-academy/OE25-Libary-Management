@@ -2,6 +2,10 @@ class Admin::UsersController < AdminController
   include UsersHelper
   before_action :find_user, except: %i(new index)
 
+  def show
+    respond_to :js
+  end
+
   def new
     @user = User.new
   end
@@ -12,12 +16,11 @@ class Admin::UsersController < AdminController
                   .page(params[:page]).per Settings.page_user
     respond_to do |format|
       format.html
-      format.xls{send_data User.to_csv(column_names: [:id, :name, :birth, :phone], col_sep: "\t")}
+      format.xls do
+        send_data User.to_csv(column_names: [:id, :name,
+       :birth, :phone], col_sep: "\t")
+      end
     end
-  end
-
-  def show
-    respond_to :js
   end
 
   def edit
