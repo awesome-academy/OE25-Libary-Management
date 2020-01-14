@@ -1,9 +1,9 @@
 <% provide :title, t("author_manage") %>
 <h2 class = "title"><%= t "author_manage" %></h2>
 <div class="search-author">
-  <%= form_tag admin_authors_path, method: :get, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do %>
-  <%= text_field_tag :search, params[:search], placeholder: t("search"), class: "form-control mr-sm-2" %>
-  <%= submit_tag t("search"), class: "btn btn-outline-success my-2 my-sm-0" %>
+  <%= search_form_for @author, url: admin_authors_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+    <%= f.search_field :name_or_description_cont, placeholder: t("search"), class: "form-control" %>
+    <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
   <% end %>
 </div>
 <div class="excel">
@@ -17,7 +17,7 @@
   <%= t "create_author" %>
   <% end %>
 </div>
-<h5><%= t "total" %>: <%= size_author %></h5>
+<h5><%= t "total" %>: <%= size_item @author %></h5>
 <?xml version="1.0"?>
 <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
 xmlns:o="urn:schemas-microsoft-com:office:office"
@@ -30,8 +30,8 @@ xmlns:html="http://www.w3.org/TR/REC-html40">
     <thead class="thead-dark">
       <tr>
         <th scope="col"><%= t "index" %></th>
-        <th scope="col"><%= t "name_author" %></th>
-        <th scope="col"><%= t "description" %></th>
+        <th scope="col"><%= sort_link @author, :name, t("name") %></th>
+        <th scope="col"><%= sort_link @author, :description, t("description") %></th>
         <th scope="col"><%= t "control" %></th>
       </tr>
     </thead>

@@ -3,13 +3,9 @@ class BooksController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @books = if params[:search].blank?
-               Book.includes(:author, :category, :publisher)
-             else
-               Book.includes(:author, :category, :publisher)
-                   .search(params[:search].downcase)
-             end
-    @books = @books.page(params[:page]).per Settings.page_book
+    @book = Book.ransack params[:q]
+    @books = @book.result.order_by_create_at
+                  .page(params[:page]).per Settings.page_user
   end
 
   def show

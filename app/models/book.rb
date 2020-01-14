@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
+  extend Excel
   BOOK_PARAMS = %i(name author_id category_id publisher_id price rest_amount
     decription image).freeze
 
@@ -7,7 +8,6 @@ class Book < ApplicationRecord
   belongs_to :publisher
   has_many :borrowed_details, dependent: :restrict_with_error
   has_many :comments, dependent: :destroy
-  has_many :rates, dependent: :destroy
   has_many :borroweds, through: :borrowed_details,
    dependent: :restrict_with_exception
   has_many :users, through: :comments
@@ -22,10 +22,8 @@ class Book < ApplicationRecord
   delegate :name, to: :category, prefix: true
   delegate :name, to: :publisher, prefix: true
 
-  scope :search, (lambda do |parameter|
-                    where("name LIKE :search",
-                          search: "%#{parameter}%")
-                  end)
+  scope :order_by_create_at, ->{order created_at: :desc}
+
   def display_image
     image.variant resize_to_limit: Settings.limit_size_image
   end

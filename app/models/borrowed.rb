@@ -14,6 +14,7 @@ class Borrowed < ApplicationRecord
   delegate :book_name, to: :borrowed_details, prefix: true
 
   scope :borrowed_present_borrow_day, ->{where.not borrow_day: nil}
+  scope :order_by_create_at, ->{order created_at: :desc}
 
   private
 

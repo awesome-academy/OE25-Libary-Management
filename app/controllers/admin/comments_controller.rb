@@ -1,10 +1,10 @@
 class Admin::CommentsController < AdminController
-  include CommentsHelper
-
   before_action :load_comment, only: :destroy
 
   def index
-    @comments = Comment.page(params[:page]).per Settings.page_borrowed
+    @comment = Comment.ransack params[:q]
+    @comments = @comment.result.order_by_create_at
+                        .page(params[:page]).per Settings.page_user
   end
 
   def destroy

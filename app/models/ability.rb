@@ -2,9 +2,9 @@ class Ability
   include CanCan::Ability
 
   def initialize user
-    if user = User.new
+    if user == User.new
       can :read, Book
-      can :show, Categogory
+      can :show, Category
     elsif user.admin?
       can :manage, :all
     else

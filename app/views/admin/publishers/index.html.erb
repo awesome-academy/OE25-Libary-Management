@@ -1,9 +1,9 @@
 <% provide :title, t("publisher_manage") %>
 <h2 class = "title"><%= t "publisher_manage" %></h2>
 <div class="search-publisher">
-  <%= form_tag admin_publishers_path, method: :get, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do %>
-    <%= text_field_tag :search, params[:search], placeholder: t("search"), class: "form-control mr-sm-2" %>
-    <%= submit_tag t("search"), class: "btn btn-outline-success my-2 my-sm-0" %>
+  <%= search_form_for @publisher, url: admin_publishers_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+    <%= f.search_field :name_or_address_cont, placeholder: t("search"), class: "form-control" %>
+    <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
   <% end %>
 </div>
 <div class="excel-publisher">
@@ -17,6 +17,7 @@
     <%= t "create_publisher" %>
   <% end %>
 </div>
+<h5><%= t "total" %>: <%= size_item @publisher %></h5>
 <?xml version="1.0"?>
 <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
   xmlns:o="urn:schemas-microsoft-com:office:office"
@@ -28,8 +29,8 @@
       <thead class="thead-dark">
         <tr>
           <th scope="col"><%= t "index" %></th>
-          <th scope="col"><%= t "name_publisher" %></th>
-          <th scope="col"><%= t "address" %></th>
+          <th scope="col"><%= sort_link @publisher, :name, t("name") %></th>
+          <th scope="col"><%= sort_link @publisher, :address, t("address") %></th>
           <th scope="col"><%= t "control" %></th>
         </tr>
       </thead>

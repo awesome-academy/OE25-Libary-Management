@@ -4,8 +4,9 @@ class Admin::BorrowedsController < AdminController
   before_action :find_borrowed, only: %i(show update)
 
   def index
-    @borroweds = Borrowed.includes(:borrowed_details, :user)
-                         .page(params[:page]).per Settings.page_borrowed
+    @borrowed = Borrowed.ransack params[:q]
+    @borroweds = @borrowed.result.order_by_create_at
+                          .page(params[:page]).per Settings.page_user
   end
 
   def show
