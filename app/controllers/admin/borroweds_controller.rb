@@ -2,6 +2,7 @@ class Admin::BorrowedsController < AdminController
   include BorrowedsHelper
 
   before_action :find_borrowed, only: %i(show update)
+  load_and_authorize_resource
 
   def index
     @borrowed = Borrowed.ransack params[:q]

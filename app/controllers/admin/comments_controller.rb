@@ -1,5 +1,6 @@
 class Admin::CommentsController < AdminController
   before_action :load_comment, only: :destroy
+  load_and_authorize_resource
 
   def index
     @comment = Comment.ransack params[:q]

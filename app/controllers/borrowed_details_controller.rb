@@ -1,6 +1,7 @@
 class BorrowedDetailsController < ApplicationController
   before_action :load_book, only: :create
   before_action :find_borrowed_details, only: :destroy
+  load_and_authorize_resource
 
   def create
     quantity = params[:quantity] || Settings.step_quantity
@@ -18,11 +19,11 @@ class BorrowedDetailsController < ApplicationController
 
   def destroy
     if @borrowed_detail.destroy
-      respond_to :js
+      flash[:success] = t "delete_borrowed_details_success"
     else
-      flash.now[:danger] = t "delete_borrowed_details_fail"
-      redirect_to root_url
+      flash[:danger] = t "delete_borrowed_details_fail"
     end
+      redirect_to borroweds_path
   end
 
   private

@@ -1,17 +1,12 @@
 <div class="cart-header" id="borrowed_detail_<%= borrowed_detail.id %>">
-  <%= link_to borrowed_detail_path(borrowed_detail), method: :delete, data: { confirm: t("sure") }, remote: true do %>
-    <div class="close1"> </div>
-  <% end %>
-  <div class="cart-sec simpleCart_shelfItem">
-    <div class="cart-item cyc">
-      <%= image_tag borrowed_detail.book_image %>
-    </div>
-  </div>
-  <h3><%= borrowed_detail.book_name %></h3>
-  <h5>
-    <br><%= t "author" %>: <%= borrowed_detail.book_author_name %><br>
-    <%= t "category" %>: <%= borrowed_detail.book_category_name %><br>
-    <p class="quantity"><%= t "quantity" %>:<%= borrowed_detail.quantity %></p>
-  </h5>
-  <div class="clearfix"></div>
+  <tr>
+    <td><%= borrowed_detail.book_name %></td>
+    <td><%= borrowed_detail.book_author_name %></td>
+    <td><%= borrowed_detail.quantity %></td>
+    <td>
+      <%= link_to borrowed_detail_path(borrowed_detail), method: :delete, data: { confirm: t("sure") }, remote: true do %>
+        <%= t "delete" %>
+      <% end %>
+    </td>
+  </tr>
 </div>

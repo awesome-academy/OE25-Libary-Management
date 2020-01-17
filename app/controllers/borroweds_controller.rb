@@ -1,5 +1,6 @@
 class BorrowedsController < ApplicationController
   before_action :find_borrowed, only: %i(edit update destroy)
+  load_and_authorize_resource
 
   def index
     @borroweds = current_user.borroweds.includes(:borrowed_details)

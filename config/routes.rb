@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :borroweds, only: %i(show)
     resources :comments, only: %i(create destroy)
     resources :account_activations, only: :edit
+    resources :categories
 
     namespace :admin do
       resources :books
@@ -32,6 +33,7 @@ Rails.application.routes.draw do
       resources :borroweds, only: %i(index show update)
       resources :authors
       resources :publishers
+      resources :categories
     end
   end
 end

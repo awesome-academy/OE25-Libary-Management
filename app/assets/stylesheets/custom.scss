@@ -167,13 +167,6 @@ input#search {
   width: 14rem;
 }
 
-form#search_form {
-  display: inline;
-  position: absolute;
-  top: 12px;
-  width: 19rem;
-}
-
 .menu_sec {
   position: relative;
 }
@@ -208,6 +201,7 @@ li.dropdown.show {
 
 input[type="submit"] {
   float: right;
+  color: $black;
 }
 .field_with_errors input{
   border: 1px solid $red !important;
@@ -282,11 +276,6 @@ body, html {
   width: 100%;
   height: 100%;
   position: relative;
-}
-form.form-inline.my-2.my-lg-0.search-form {
-  display: inline-block;
-  padding-top: 7px;
-  margin-left: 1rem;
 }
 
 ul.navbar-nav.login {
@@ -620,7 +609,7 @@ table.table.table-bordered.table-hover {
 
 h2.title {
   text-align: center;
-  margin-top: -28px;
+  margin-top: -38px;
 }
 
 a.book-btn {
@@ -763,11 +752,7 @@ ul.nav.pull-right.top-menu {
 
 input.btn.btn-outline-success.my-2.my-sm-0 {
   width: 72px;
-}
-
-a.btn.btn-success.create-book {
-  float: right;
-  margin-bottom: 2rem;
+  margin-left: 2rem;
 }
 
 input#book_image {
@@ -851,11 +836,6 @@ h3 {
   top: 2rem;
 }
 
-a.btn.btn-success.create-book {
-  float: right;
-  margin-bottom: 2rem;
-}
-
 input#book_image {
   margin-top: 2rem;
 }
@@ -912,11 +892,6 @@ h4#myModalLabel {
   font-weight: bold;
   right: 11rem;
   top: 7rem;
-}
-
-a.btn.btn-success.create-book {
-  float: right;
-  margin-bottom: 2rem;
 }
 
 input#book_image {
@@ -1016,13 +991,9 @@ a.sort_link {
 .search-comment {
   margin-top: 54px;
   margin-left: -15px;
+  margin-bottom: 1rem;
 }
 
-.excel-book {
-  margin-left: 850px;
-  margin-top: -45px;
-  height: 41px;
-}
 .search-borrowed {
   margin-top: 54px;
   margin-left: -15px;
@@ -1033,7 +1004,92 @@ a.sort_link {
   margin-left: -15px;
 }
 
-a.btn.btn-success.create-book {
-  margin-top: -42px;
-  margin-right: -108px;
+ul.megamenu.skyblue {
+  width: 100%;
+}
+
+ul.sub-category {
+  background-color: $blue-dark;
+  width: 15rem;
+  display: none;
+  position: absolute;
+  top: 62px;
+  z-index: 5;
+  line-height: 43px;
+  text-align: center;
+  margin-left: -12px;
+  padding-top: 6px;
+  transition: 0.5s;
+}
+
+li.grid {
+  display: inline-block;
+  padding: 19px 12px;
+  transition: 0.5s;
+  &:hover {
+    background-color: $blue-dark;
+    a.color1 {
+      color: $white;
+    }
+    ul.sub-category{
+      display: block;
+    }
+  }
+}
+
+.mega_nav {
+  height: 60px;
+}
+
+ul.category {
+  margin-top: -1px;
+}
+
+a.color1 {
+  color: $blue-dark;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px;
+}
+
+ul.sub-category li:hover {
+  background-color: $darkblue;
+  a.color2{
+    background-color: $darkblue;
+    color: $white;
+  }
+}
+
+a.color2 {
+  color: white;
+  font-size: 17px;
+}
+
+h4.title-cate {
+  display: inline;
+  background-color: $blue-dark;
+  padding: 3px 8px 7px 8px;
+  border-radius: 25px;
+  color: $white;
+}
+
+.excel-book {
+  margin-left: 6rem;
+}
+
+td {
+  height: 10px!important;
+}
+
+li {
+  list-style-type: none;
+}
+
+.p-one.simpleCart_shelfItem.jwe {
+  overflow: hidden;
+}
+
+.p-one.simpleCart_shelfItem.jwe a img {
+  height: 300px;
+  width: 232px;
 }

@@ -1,0 +1,43 @@
+<% provide :title, @category.name %>
+<div class="block" id="module_topcategories">
+  <div class="container category">
+    <h4 class="title-cate"><%= @category.name %></h4>
+  </div>
+  <div class="blockcontent">
+    <div class="banner-bottom">
+      <div class="container">
+        <div class="product-one">
+          <% @books.each do |book| %>
+            <div class="col-md-3 product-left">
+              <div class="p-one simpleCart_shelfItem jwe">
+                <%= link_to book_path(book) do %>
+                  <%= image_tag book.display_image, alt: "img-responsive", class: "img-responsive" %>
+                  <div class="mask">
+                    <span><%= t "quick_view" %></span>
+                  </div>
+                <% end %>
+                <div class="title_book">
+                  <%= book.name %>
+                </div>
+                <div class="product-left-cart">
+                  <div class="product-left-cart-l">
+                    <p>
+                      <%= link_to "#", class: "item_add" do %>
+                        <span class=" item_price">
+                          <%= Settings.price %>
+                        </span>
+                      <% end %>
+                    </p>
+                    <%= button_to t("borrow"), borrowed_details_path(book_id: book.id),
+                      class: "btn btn-primary" %>
+                  </div>
+                  <div class="clearfix"> </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

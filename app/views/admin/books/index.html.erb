@@ -1,21 +1,33 @@
 <% provide :title, t("book_manage") %>
 <h2 class = "title"><%= t "book_manage" %></h2>
-<div class="search-book">
-  <%= search_form_for @book, url: admin_books_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
-    <%= f.search_field :name_or_category_name_or_author_name_or_publisher_name_cont, placeholder: t("search"), class: "form-control" %>
-    <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
-  <% end %>
-</div>
-<div class="excel-book">
-  <%= link_to admin_books_path(format: "xls"), class: "btn btn-success" do %>
-    <%= t "excel" %>
-  <% end %>
-</div>
-<div class="create-book">
-  <%= link_to new_admin_book_path, class: "btn btn-success create-book" do %>
-    <i class="fa fa-plus"></i>
-  <%= t "create_book" %>
-<% end %>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="search-book">
+      <%= search_form_for @book, url: admin_books_path, id: :search_form, class: "form-inline my-2 my-lg-0 search-form" do |f|%>
+      <%= f.search_field :name_or_category_name_or_author_name_or_publisher_name_cont, placeholder: t("search"), class: "form-control" %>
+      <%= f.submit class: "btn btn-outline-success my-2 my-sm-0"%>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-4">
+    <div class="col-sm-6">
+      <div class="excel-book">
+        <%= link_to admin_books_path(format: :xls), class: "btn btn-success" do %>
+        <%= t "excel" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="create-book">
+        <%= link_to new_admin_book_path, class: "btn btn-success create-book" do %>
+        <i class="fa fa-plus"></i>
+        <%= t "create_book" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 <h5><%= t "total" %>: <%= size_item @book %></h5>
 <?xml version="1.0"?>

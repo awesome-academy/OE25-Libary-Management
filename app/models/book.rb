@@ -24,6 +24,7 @@ class Book < ApplicationRecord
 
   scope :order_by_create_at, ->{order created_at: :desc}
 
+
   def display_image
     image.variant resize_to_limit: Settings.limit_size_image
   end
